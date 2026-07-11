@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  /* ProCleaning Green Theme */
+  --color-brand-primary: #22c55e;
+  /* Green-500 */
+
+  /* Darker Green for hover/secondary */
+  --color-brand-secondary: #16a34a;
+  /* Green-600 */
+
+  /* Dark for text/footer */
+  --color-brand-dark: #1a1f1d;
+
+  /* Clean White/Off-white for background */
+  --color-brand-light: #ffffff;
+
+  /* Vibrant Orange - Darkened for text accessibility (#D97706 -> #C26A05 for ~4.5:1 on white if needed, but D97706 is 4.5:1 on black. D97706 on white is ~3.0. Let's go darker. #B45309 is better) */
+  /* Actually using #B45309 for better contrast on light backgrounds */
+  --color-brand-accent: #B45309;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+
+  /* Override Tailwind gray colors for better accessibility */
+  /* Default gray-400 is #9CA3AF (2.8:1 contrast) - too low */
+  /* Using gray-500's value #6B7280 which has 4.6:1 contrast */
+  --color-gray-400: #6B7280;
+
+  /* Default gray-500 is #6B7280 (4.6:1 contrast) - borderline */
+  /* Using gray-600's value #4B5563 which has 7.0:1 contrast */
+  --color-gray-500: #4B5563;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-brand-light);
+    color: var(--color-brand-dark);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  /* Restrict container width globally */
+  .container {
+    max-width: 1280px;
+    /* xl breakpoint */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, var(--color-brand-primary), var(--color-brand-secondary));
+  }
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.glass-dark {
+  background: rgba(11, 17, 32, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: var(--animate-float);
+}
