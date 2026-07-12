@@ -111,7 +111,7 @@ export default function Hero() {
 
                 {/* ── GRADIENT OVERLAY — white on left, transparent on right (desktop only) ── */}
                 <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/10 pointer-events-none" />
-
+                {/* Hello  hbedhfbashbfhasbhfbshbfhbshfb*/}
                 {/* ── TEXT CONTENT — z-10 over the gradient ── */}
                 <div className="
                     relative z-10
@@ -169,7 +169,7 @@ export default function Hero() {
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-3 pt-1">
                             <a
-                                href="tel:+917677779418"
+                                href="tel:+911234567890"
                                 id="hero-call-btn"
                                 className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-sm"
                             >
