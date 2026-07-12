@@ -1,4 +1,4 @@
-import { ShieldCheck, Users, Target, Award } from "lucide-react";
+import { Droplets, Umbrella, Layers, Box, Zap, Building2, CheckCircle, ArrowRight, Shield, Award, Search, HeartHandshake } from "lucide-react";
 import Image from "next/image";
 
 export const metadata = {
@@ -40,13 +40,13 @@ export default function AboutPage() {
                         </div>
                     </div>
                     <div className="w-full lg:w-1/2">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Creating a Sense of Belonging</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Protecting Structures with Trusted Waterproofing Solutions</h2>
                         <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                             <p>
-                                BHAWANI TECHNOLOGIES is a well-diversified organization. To make it an enduring brand and an eternal organization, we believe in creating a strong sense of belonging. While our organization has been growing tremendously over the years, so have the bunch of talented and dedicated people who have made it possible. Not surprisingly, we have perhaps the lowest attrition rate in the industry.
+                                Bhawani Technologies is a professional waterproofing company specializing in the supply and application of high-performance waterproofing systems. We provide reliable solutions for residential, commercial, and industrial projects using premium construction chemicals and skilled workmanship.
                             </p>
                             <p>
-                                Our Construction Chemicals Division (CCD) is specialized in the Trading and Application of Construction Chemicals, focusing on waterproofing systems and industrial epoxy floorings, backed by a highly creative and technical staff.
+                                With a commitment to quality, durability, and customer satisfaction, we help protect buildings from water leakage, seepage, dampness, and structural damage.
                             </p>
                         </div>
 
@@ -75,29 +75,29 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                             <div className="w-14 h-14 bg-green-100 text-brand-primary rounded-xl flex items-center justify-center mb-6 font-bold text-xl">
-                                CA
+                                <Search size={24} />
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Consultative Approach</h3>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Free Site Inspection</h3>
                             <p className="text-gray-600 leading-relaxed text-sm">
-                                BHAWANI TECHNOLOGIES follows a consultative approach. Our marketing and technical members first understand your business and goals, asking <strong>"What we can do about it"</strong> to offer tailored products accordingly.
+                                We inspect your property, identify the source of leakage, and recommend the best waterproofing solution.
                             </p>
                         </div>
                         <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                             <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6 font-bold text-xl">
-                                OPEX
+                                <Award size={24} />
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Operational Excellence</h3>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Premium Quality Materials</h3>
                             <p className="text-gray-600 leading-relaxed text-sm">
-                                A methodology for solving problems and continuous improvement of products & processes through acquisition & utilization of knowledge, using critical thought and planned experimentation.
+                                We use high-performance waterproofing products from trusted brands for lasting protection.
                             </p>
                         </div>
                         <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                             <div className="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6 font-bold text-xl">
-                                AA
+                                <HeartHandshake size={24} />
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Authorized Applicators</h3>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Guaranteed Customer Satisfaction</h3>
                             <p className="text-gray-600 leading-relaxed text-sm">
-                                We feature a team of highly-skilled applicators, authorized directly by the parent company, which ensures high quality, reliable execution, and maximum performance of all applied products.
+                                We focus on timely execution, quality workmanship, and complete customer satisfaction.
                             </p>
                         </div>
                     </div>

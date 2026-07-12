@@ -11,109 +11,130 @@ import Image from "next/image";
 
 const services = [
     {
-        icon: Shield,
-        title: "HDPE Membrane Waterproofing",
-        desc: "High-density polyethylene membranes for durable, long-lasting waterproofing protection.",
-        features: ["Water Infiltration Prevention", "Moisture Damage Protection", "Liner Applications"],
-        image: "/servicesImages/service1.png"
-    },
-    {
         icon: Umbrella,
-        title: "TPO Membrane Waterproofing",
-        desc: "Single-ply roofing membrane offering excellent waterproofing properties and durability.",
-        features: ["Single-Ply Application", "Roofing Solutions", "Long-Term Durability"],
-        image: "/servicesImages/service2.png"
+        title: "Terrace Waterproofing",
+        desc: "High-performance waterproofing systems for rooftops and terraces to prevent structural water damage.",
+        features: ["Monsoon Leakage Protection", "Thermal Insulation Options", "Seamless Membrane Coatings"],
+        image: "/image-7.jpg"
     },
     {
-        icon: Layers,
-        title: "PVC Membrane Waterproofing",
-        desc: "Highly durable, flexible membranes resistant to UV rays, chemicals, and weathering.",
-        features: ["Flat & Low-Sloped Roofs", "UV & Chemical Resistant", "Weather Resistant"],
-        image: "/servicesImages/service3.png"
-    },
-    {
-        icon: Layers,
-        title: "EPDM Membrane Waterproofing",
-        desc: "Synthetic rubber material offering excellent resistance to weathering and extreme temperatures.",
-        features: ["Roofs & Basements", "Foundations & Ponds", "Water Containment Structures"],
-        image: "/servicesImages/service4.png"
-    },
-    {
-        icon: Droplets,
-        title: "Polyurea Coating & Spray",
-        desc: "Exceptional durability, chemical resistance, and waterproofing protective coating system.",
-        features: ["Corrosion & Abrasion Protection", "Metal, Concrete & Wood Application", "Roofs, Basements & Decks"],
-        image: "/104.jpg"
-    },
-    {
-        icon: Box,
-        title: "PU Foam Spray",
-        desc: "Self-expanding polyurethane foam spray with excellent insulating and filling properties.",
-        features: ["Expands 3x Original Volume", "Fills Cracks & Gaps", "Universal Adhesion"],
-        image: "/105.jpg"
-    },
-    {
-        icon: Layers,
-        title: "Carbon Fibre Wrapping",
-        desc: "High tensile strength, lightweight solution for structural strengthening.",
-        features: ["Structural Strengthening", "Lightweight Reinforcement", "Custom Engineered Design"],
-        image: "/106.jpg"
-    },
-    {
-        icon: Droplets,
-        title: "Injection Grouting",
-        desc: "Method of filling cracks, joints, and voids under pressure for structural strengthening.",
-        features: ["Crack & Void Filling", "Structural Strengthening", "Pest & Germ Prevention"],
-        image: "/image-3.jpg"
-    },
-    {
-        icon: Layers,
-        title: "Epoxy & PU Flooring",
-        desc: "Durable two-part resin flooring system resistant to chemicals, stains, and moisture.",
-        features: ["High-Traffic Areas", "Chemical & Stain Resistant", "Industrial & Commercial Use"],
-        image: "/image-1.jpg"
-    },
-    {
-        icon: Layers,
-        title: "SBS Membrane Waterproofing",
-        desc: "Modified bitumen membranes using Styrene-Butadiene-Styrene synthetic rubber polymers.",
-        features: ["Wide Substrate Compatibility", "Concrete, Metal & Wood", "Insulation Board Application"],
-        image: "/107.jpg"
+        icon: Cloud,
+        title: "Roof Waterproofing",
+        desc: "Comprehensive roof sealing and coating solutions to guard against rain, weathering, and structural seepage.",
+        features: ["UV Resistant Barrier", "Thermal Crack Resistance", "Long-lasting Protection"],
+        image: "/newImage.png"
     },
     {
         icon: Building2,
-        title: "Bridge Deck Waterproofing",
-        desc: "Crucial protection for bridge decks against moisture, rain, and freeze-thaw cycles.",
-        features: ["Environmental Protection", "Structural Component Safety", "Extended Bridge Lifespan"],
-        image: "/108.jpg"
-    },
-    {
-        icon: Layers,
-        title: "Self-Adhesive Membrane Waterproofing",
-        desc: "Flexible building material providing barrier protection against water penetration.",
-        features: ["Foundation Walls & Basements", "Roofs, Balconies & Terraces", "Mold & Leak Prevention"],
-        image: "/109.jpg"
+        title: "Basement Waterproofing",
+        desc: "Advanced positive and negative side waterproofing systems designed to keep underground spaces bone dry.",
+        features: ["Hydrostatic Pressure Control", "Moisture & Dampness Sealing", "Sump & Drainage Systems"],
+        image: "/image-8.jpg"
     },
     {
         icon: Droplets,
-        title: "Polyurethane Waterproofing",
-        desc: "Liquid applied seamless waterproofing system for complex geometric connections.",
-        features: ["Roofs, Balconies & Terraces", "Kitchens & Basements", "Patios & Wet Areas"],
+        title: "Bathroom Waterproofing",
+        desc: "Multi-layered water barrier solutions for wet areas to prevent tile joint leakage and damp walls.",
+        features: ["Tile Seeping Prevention", "Corner Reinforcement", "Moisture-resistant Grouting"],
+        image: "/110.jpg"
+    },
+    {
+        icon: Droplets,
+        title: "Water Tank Waterproofing",
+        desc: "Food-grade non-toxic waterproofing liners and coatings for concrete water storage tanks.",
+        features: ["Non-toxic & Food Safe", "Seepage & Leak Control", "Algae Growth Prevention"],
+        image: "/114.jpg"
+    },
+    {
+        icon: Sparkles,
+        title: "Swimming Pool Waterproofing",
+        desc: "Highly flexible elastomeric waterproofing membranes built to withstand constant water pressure.",
+        features: ["High Elasticity", "Chemical Resistance", "Tile Adhesive Compatibility"],
+        image: "/112.jpg"
+    },
+    {
+        icon: Umbrella,
+        title: "Balcony Waterproofing",
+        desc: "Weatherproof sealant and membrane systems to protect balconies and patios from water intrusion.",
+        features: ["UV and Weather Resistant", "Joint Leakage Protection", "Sleek Overlay Integration"],
+        image: "/109.jpg"
+    },
+    {
+        icon: Layers,
+        title: "Podium Deck Waterproofing",
+        desc: "Heavy-duty waterproofing systems engineered for podium decks, landscaped areas, and driveways.",
+        features: ["Root Barrier Layers", "Heavy Load Durability", "Robust Drainage Protection"],
+        image: "/image-2.jpg"
+    },
+    {
+        icon: Box,
+        title: "Lift Pit Waterproofing",
+        desc: "Negative-side crystalline and grout injection solutions to stop groundwater inflow into lift pits.",
+        features: ["Negative Side Sealing", "Groundwater Stop", "Rapid Injection Grouting"],
+        image: "/111.jpg"
+    },
+    {
+        icon: Layers,
+        title: "Retaining Wall Waterproofing",
+        desc: "Heavy-duty exterior barrier coatings to prevent dampness from soil contact in retaining walls.",
+        features: ["Soil Chemicals Resistance", "High Tear Strength", "Efficient Drainage Boards"],
+        image: "/image-17.jpg"
+    },
+    {
+        icon: Layers,
+        title: "Expansion Joint Treatment",
+        desc: "Flexible movement joint sealing systems to accommodate thermal expansion while staying watertight.",
+        features: ["High Movement Capability", "Heavy-duty Joint Sealants", "Watertight Elastic Bands"],
+        image: "/120.jpg"
+    },
+    {
+        icon: Hammer,
+        title: "Injection Grouting",
+        desc: "High-pressure PU and cementitious grout injection to fill voids and seal active water leaks.",
+        features: ["Active Leakage Stopping", "Deep Void & Crack Filling", "Structural Strengthening"],
+        image: "/image-3.jpg"
+    },
+    {
+        icon: Hammer,
+        title: "Crack Repair & Structural Repair",
+        desc: "Epoxy resins and carbon fiber wrapping to restore structural integrity and seal wall/beam cracks.",
+        features: ["Carbon Fiber Wrapping", "High Tensile Strength", "Concrete Rehabilitation"],
+        image: "/122.jpg"
+    },
+    {
+        icon: Droplets,
+        title: "PU Coating System",
+        desc: "Highly elastic polyurethane liquid membranes providing seamless and UV-resistant waterproofing.",
+        features: ["Seamless Finish", "Excellent Crack-bridging", "UV Stable Topcoat"],
         image: "/110.jpg"
     },
     {
         icon: Sparkles,
-        title: "Crystalline Waterproofing",
-        desc: "Compound that creates insoluble crystals in concrete pores, blocking water penetration.",
-        features: ["Concrete Pore Sealing", "Self-Developing Protection", "Long-Term Water Blocking"],
-        image: "/111.jpg"
+        title: "Polyurea Coating",
+        desc: "Ultra-fast curing spray application offering premium chemical, physical, and water resistance.",
+        features: ["Instant Curing", "Extreme Wear Resistance", "Jointless Protection"],
+        image: "/104.jpg"
     },
     {
-        icon: Umbrella,
-        title: "Turner Waterproofing",
-        desc: "Proven waterproofing and roofing solutions for various exterior surface applications.",
-        features: ["Decks & Balconies", "Walkways", "Exterior Surfaces"],
-        image: "/112.jpg"
+        icon: Droplets,
+        title: "Acrylic Waterproof Coating",
+        desc: "User-friendly, cost-effective acrylic-based elastomeric paint coatings for exterior walls and roofs.",
+        features: ["Breathable Membrane", "Anti-fungal & Anti-algae", "Solar Reflective Options"],
+        image: "/113.jpg"
+    },
+    {
+        icon: Layers,
+        title: "Cementitious Waterproofing",
+        desc: "Rigid and semi-flexible polymer-modified cementitious coatings for water-retaining structures.",
+        features: ["Excellent Adhesion to Concrete", "Easy Application", "Non-toxic Drinking Safe"],
+        image: "/115.jpg"
+    },
+    {
+        icon: Layers,
+        title: "Bituminous Waterproofing",
+        desc: "Classic hot and cold-applied bitumen coatings to seal foundations, basements, and roofs.",
+        features: ["Excellent Bonding Strength", "High Moisture Barrier", "Thick Protection Layer"],
+        image: "/image-16.jpg"
     },
     {
         icon: Layers,
@@ -124,143 +145,59 @@ const services = [
     },
     {
         icon: Layers,
-        title: "Polymer Coating",
-        desc: "Thin synthetic polymer layers providing protection and enhanced performance.",
-        features: ["Metals, Plastics & Ceramics", "Corrosion Prevention", "Extended Object Life"],
-        image: "/113.jpg"
+        title: "SBS Membrane Waterproofing",
+        desc: "Modified bitumen membranes using Styrene-Butadiene-Styrene synthetic rubber polymers.",
+        features: ["Wide Substrate Compatibility", "Concrete, Metal & Wood", "Insulation Board Application"],
+        image: "/107.jpg"
     },
     {
         icon: Layers,
-        title: "FRP Coating",
-        desc: "Superior FRP linings and coatings for tanks and civil structures, 25+ years expertise.",
-        features: ["MS Tanks & Civil Trenches", "Pits Lining", "Competitive Market Pricing"],
-        image: "/114.jpg"
-    },
-    {
-        icon: Layers,
-        title: "Carbon Laminates",
-        desc: "Pre-cured carbon fiber composite sheets for strengthening existing structures.",
-        features: ["Concrete Beams & Columns", "Load-Carrying Capacity", "Earthquake Resistance"],
-        image: "/115.jpg"
-    },
-    {
-        icon: Layers,
-        title: "Brick Bat Coba",
+        title: "Brick Bat Coba Waterproofing",
         desc: "Traditional roof waterproofing using brick bats with thermal insulation for coastal regions.",
         features: ["Flat RCC Roofs", "Water Drainage Slope", "Coastal Region Suitable"],
         image: "/116.jpg"
     },
     {
-        icon: Search,
-        title: "Leak Detection",
-        desc: "Advanced REF-LOCATOR unit using heated electrolyte sensor technology.",
-        features: ["Modern Detection Standards", "Heated Electrolyte Sensor", "Precise Leak Location"],
-        image: "/117.jpg"
+        icon: Layers,
+        title: "Epoxy Flooring",
+        desc: "Premium two-part epoxy floor toppings for aesthetic, dust-free, and chemical-resistant finishes.",
+        features: ["Seamless & Glossy", "Chemical & Abrasion Resistant", "Dust-proof & Easy Clean"],
+        image: "/image-1.jpg"
     },
     {
         icon: Layers,
-        title: "Trimix Flooring",
-        desc: "Specialized concrete flooring offering enhanced durability and abrasion resistance.",
-        features: ["Industrial & Commercial Use", "Heavy Foot Traffic Areas", "Machinery Equipment Zones"],
-        image: "/118.jpg"
-    },
-    {
-        icon: Layers,
-        title: "Industrial Flooring",
+        title: "Industrial Floor Coating",
         desc: "Power trowel and laser-guided screed application for level, smooth finishes.",
         features: ["Heavy Traffic Resistance", "Chemical Spill Resistant", "Extreme Temperature Tolerance"],
         image: "/119.jpg"
     },
     {
-        icon: Layers,
-        title: "Expansion Joint System",
-        desc: "Assembly designed to absorb temperature-induced expansion and structural movement.",
-        features: ["Buildings & Bridges", "Sidewalks & Railway Tracks", "Piping Systems & Ships"],
-        image: "/120.jpg"
-    },
-    {
-        icon: Thermometer,
-        title: "Thermal Insulation",
-        desc: "Essential roof component reducing heating and cooling energy costs.",
-        features: ["Comfortable Indoor Environment", "Energy Cost Reduction", "Commercial Building Systems"],
-        image: "/121.jpg"
+        icon: Shield,
+        title: "Anti-Corrosive Coating",
+        desc: "Specialized barrier coatings protecting steel, pipelines, and concrete from corrosive agents.",
+        features: ["Rust & Salt Protection", "Chemical Barrier", "Long-term Infrastructure Life"],
+        image: "/108.jpg"
     },
     {
         icon: Hammer,
-        title: "Structural Repair",
-        desc: "Technologies to restore or add load-carrying capacity to structures.",
-        features: ["Deterioration Repair", "Seismic Condition Solutions", "Bridges & Buildings"],
-        image: "/122.jpg"
+        title: "Concrete Repair & Rehabilitation",
+        desc: "Restoring damaged structures using micro-concrete, polymer mortars, and rust converters.",
+        features: ["Micro-Concrete Pouring", "Spalling Concrete Repair", "Rebar Rust Treatment"],
+        image: "/118.jpg"
     },
     {
-        icon: Disc,
-        title: "Diamond Core Cutting",
-        desc: "Precise method of creating circular openings in concrete, masonry, and stone.",
-        features: ["Reinforced Concrete", "Brick, Stone & Asphalt", "Precise Accurate Cuts"],
-        image: "/123.jpg"
+        icon: Box,
+        title: "Construction Chemical Supply",
+        desc: "Supply of premium admixtures, waterproofing chemicals, epoxy resins, and joint sealers.",
+        features: ["Wholesale Trading", "Top Certified Brands", "On-site Delivery & Consulting"],
+        image: "/105.jpg"
     },
     {
-        icon: Disc,
-        title: "RCC Concrete Diamond",
-        desc: "Specialized diamond-tipped tools for cutting reinforced concrete structures.",
-        features: ["Saws & Wire Saws", "Precision & Efficiency", "Steel Reinforcement Handling"],
-        image: "/124.jpg"
-    },
-    {
-        icon: Disc,
-        title: "Sawing Cutting",
-        desc: "Controlled cutting, drilling, and removal process using diamond blade saws.",
-        features: ["Repairs & Alterations", "Opening Creation", "Renovation Projects"],
-        image: "/125.jpg"
-    },
-    {
-        icon: Link2,
-        title: "Anchor Re-Bars",
-        desc: "Steel reinforcing bars creating strong connections between concrete structures.",
-        features: ["Structural Integrity", "Load Transfer", "Stability Enhancement"],
-        image: "/image-4.jpg"
-    },
-    {
-        icon: Link2,
-        title: "Anchor Bolts",
-        desc: "Heavy-duty fasteners securing structures and objects to concrete or masonry.",
-        features: ["Threaded Rod Embedding", "Beams & Columns", "Machinery Attachment"],
-        image: "/image-5.jpg"
-    },
-    {
-        icon: Cloud,
-        title: "Light Weight Cellular Foam Concrete",
-        desc: "Foamed concrete incorporating air bubbles for unique lightweight properties.",
-        features: ["Cement-Based Mixture", "Cellular Structure", "Reduced Weight Construction"],
-        image: "/image-6.jpg"
-    },
-    {
-        icon: Droplets,
-        title: "Guniting / Shortcrete",
-        desc: "Spray application methods for concrete or mortar, dry-mix or wet-mix processes.",
-        features: ["Dry-Mix Process", "Wet-Mix Process", "Surface Spray Application"],
-        image: "/image-7.jpg"
-    },
-    {
-        icon: Hammer,
-        title: "Civil Miscellaneous Work",
-        desc: "Broad range of smaller construction, maintenance, and repair tasks.",
-        features: ["Utility Infrastructure", "Site Preparation", "Routine Maintenance"],
-        image: "/image-8.jpg"
-    },
-    {
-        icon: Trash2,
-        title: "Demolition and Dismantling Work",
-        desc: "Removal and breakdown of existing structures, complete or careful dismantling.",
-        features: ["Building Demolition", "Bridge Removal", "Component Dismantling"],
-        image: "/image-13.jpg"
-    },
-    {
-        icon: Building2,
-        title: "Building Construction",
-        desc: "Complete process of creating structures from planning to final touches.",
-        features: ["Planning & Design", "Site Preparation", "Full Construction Execution"],
-        image: "/image-14.jpg"
+        icon: Search,
+        title: "Waterproofing Consultation & Site Inspection",
+        desc: "Professional site analysis using advanced leak detection to provide engineered solutions.",
+        features: ["Source Leak Inspection", "Material Selection Guide", "Custom Project Estimation"],
+        image: "/117.jpg"
     }
 ];
 

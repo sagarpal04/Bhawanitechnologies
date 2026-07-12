@@ -1,6 +1,6 @@
 "use client";
 
-import { Target, Award, ShieldCheck, Briefcase, Trophy, Users, HeartHandshake } from "lucide-react";
+import { Target, Award, ShieldCheck, Briefcase, Trophy, Users, HeartHandshake, Search } from "lucide-react";
 import Image from "next/image";
 
 const stats = [
@@ -12,28 +12,28 @@ const stats = [
 
 const values = [
     {
-        title: "Consultative Approach",
-        icon: <Target size={22} />,
+        title: "Free Site Inspection",
+        icon: <Search size={22} />,
         bgColor: "bg-green-50",
         iconColor: "text-green-600",
         lineColor: "bg-gradient-to-r from-green-500 to-green-600",
-        desc: <>We first ask you about your business and goals to identify <strong>"WHAT WE CAN DO ABOUT IT"</strong> and offer products accordingly.</>
+        desc: <>We inspect your property, identify the source of leakage, and recommend the best waterproofing solution.</>
     },
     {
-        title: "Operational Excellence",
+        title: "Premium Quality Materials",
         icon: <Award size={22} />,
         bgColor: "bg-blue-50",
         iconColor: "text-blue-600",
         lineColor: "bg-gradient-to-r from-blue-500 to-blue-600",
-        desc: <>Continuous improvement of products & processes through acquisition & utilization of knowledge, using critical thought and planned experimentation.</>
+        desc: <>We use high-performance waterproofing products from trusted brands for lasting protection.</>
     },
     {
-        title: "Authorized Applicators",
-        icon: <ShieldCheck size={22} />,
+        title: "Guaranteed Customer Satisfaction",
+        icon: <HeartHandshake size={22} />,
         bgColor: "bg-purple-50",
         iconColor: "text-purple-600",
         lineColor: "bg-gradient-to-r from-purple-500 to-purple-600",
-        desc: <>Authorized team of applicators directly certified by parent company for improving the quality & performance of products.</>
+        desc: <>We focus on timely execution, quality workmanship, and complete customer satisfaction.</>
     }
 ];
 
@@ -78,18 +78,15 @@ export default function About() {
                         </span>
                         
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
-                            Creating a Sense of <span className="text-green-600">Belonging</span>
+                            Protecting Structures with <span className="text-green-600">Trusted Waterproofing Solutions</span>
                         </h2>
                         
                         <div className="space-y-5 text-gray-600 text-sm md:text-base leading-relaxed mb-10">
                             <p className="text-gray-800 font-medium text-base md:text-[17px] leading-relaxed">
-                                BHAWANI TECHNOLOGIES is a well-diversified organization. To make it an enduring brand and an eternal organization, we believe in creating a strong sense of belonging.
+                                Bhawani Technologies is a professional waterproofing company specializing in the supply and application of high-performance waterproofing systems. We provide reliable solutions for residential, commercial, and industrial projects using premium construction chemicals and skilled workmanship.
                             </p>
                             <p>
-                                While our organization has been growing tremendously over the years, so have the bunch of talented and dedicated people who have made it possible.
-                            </p>
-                            <p>
-                                Our Construction Chemicals Division (CCD) is specialized in the Trading and Application of Construction Chemicals (Waterproofing & Industrial Epoxy Floorings), utilizing the best minds and creative & technical staff to achieve outstanding results.
+                                With a commitment to quality, durability, and customer satisfaction, we help protect buildings from water leakage, seepage, dampness, and structural damage.
                             </p>
                         </div>
 

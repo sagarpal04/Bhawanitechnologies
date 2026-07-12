@@ -35,7 +35,7 @@ export default function Footer() {
                         </Link>
 
                         <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
-                            BHAWANI TECHNOLOGIES is a well-diversified organization offering premium construction chemical application, industrial flooring, and waterproofing solutions.
+                            Bhawani Technologies is a professional waterproofing company specializing in the supply and application of high-performance waterproofing systems.
                         </p>
                     </div>
 

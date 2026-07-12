@@ -62,10 +62,10 @@ export default function FindUs() {
             {/* Main Content Container */}
             <section className="relative z-10 pt-24 pb-12 lg:pt-28">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-                    <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                    <div className="max-w-3xl mx-auto">
                         
                         {/* Left Side: Text and Contact Cards */}
-                        <div className="lg:col-span-5 space-y-8">
+                        <div className="space-y-8">
                             {/* Header */}
                             <div>
                                 <p className="text-green-500 font-bold text-xs uppercase tracking-widest mb-3 flex items-center gap-2">
@@ -189,12 +189,10 @@ export default function FindUs() {
                             </div>
                         </div>
 
-                        {/* Right Side: Message Form */}
+                        {/* Right Side: Message Form (Commented out)
                         <div className="lg:col-span-7 bg-white rounded-[32px] p-8 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden border border-slate-100 lg:sticky lg:top-24 h-fit">
-                            {/* Dot Pattern in Corner */}
                             <div className="absolute top-0 right-0 w-32 h-32 opacity-[0.07] pointer-events-none bg-[radial-gradient(#000_1.5px,transparent_1.5px)] [background-size:16px_16px] m-4"></div>
 
-                            {/* Header Row */}
                             <div className="flex items-center gap-4 mb-8">
                                 <div className="flex-shrink-0 w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-green-600 border border-green-100/50">
                                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
@@ -208,7 +206,6 @@ export default function FindUs() {
                             </div>
 
                             <form onSubmit={handleSubmit} className="space-y-5">
-                                {/* Name */}
                                 <div>
                                     <label htmlFor="name" className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wider">
                                         Name <span className="text-red-500">*</span>
@@ -232,7 +229,6 @@ export default function FindUs() {
                                     </div>
                                 </div>
 
-                                {/* Email */}
                                 <div>
                                     <label htmlFor="email" className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wider">
                                         Email <span className="text-red-500">*</span>
@@ -256,7 +252,6 @@ export default function FindUs() {
                                     </div>
                                 </div>
 
-                                {/* Phone */}
                                 <div>
                                     <label htmlFor="phone" className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wider">
                                         Phone <span className="text-gray-400 font-normal lowercase">(Optional)</span>
@@ -279,7 +274,6 @@ export default function FindUs() {
                                     </div>
                                 </div>
 
-                                {/* Message */}
                                 <div>
                                     <label htmlFor="message" className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wider">
                                         Message <span className="text-red-500">*</span>
@@ -296,7 +290,6 @@ export default function FindUs() {
                                     />
                                 </div>
 
-                                {/* Status Messages */}
                                 {status === "success" && (
                                     <div className="p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-xs sm:text-sm font-medium flex items-center gap-2 animate-fade-in">
                                         <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
@@ -304,7 +297,6 @@ export default function FindUs() {
                                     </div>
                                 )}
 
-                                {/* Submit Button */}
                                 <button
                                     type="submit"
                                     disabled={status === "loading"}
@@ -329,7 +321,6 @@ export default function FindUs() {
                                     )}
                                 </button>
 
-                                {/* Privacy Footer */}
                                 <div className="flex items-center justify-center gap-2 mt-4 pt-1 border-t border-gray-100">
                                     <svg className="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -338,6 +329,7 @@ export default function FindUs() {
                                 </div>
                             </form>
                         </div>
+                        */}
                     </div>
                 </div>
             </section>

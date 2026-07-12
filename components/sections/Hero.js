@@ -4,12 +4,12 @@ import Image from "next/image";
 
 /* ─── data ─────────────────────────────────────────────────── */
 const checks = [
-    "No Leakage Guarantee",
-    "Free Site Visit",
-    "Expert Team With 10+ Years Experience",
-    "Free Consultation",
-    "Affordable & Long-Lasting Solutions",
-    "Quality You Can Trust",
+    "Experienced & Skilled Team",
+    "Premium Quality Materials",
+    "Professional Application",
+    "Long-Lasting Waterproofing Solutions",
+    "Timely Project Completion",
+    "Customer Satisfaction Guaranteed",
 ];
 
 const stats = [
@@ -125,22 +125,24 @@ export default function Hero() {
 
                         {/* Breadcrumb */}
                         <p className="text-[11px] font-bold text-green-700 uppercase tracking-widest leading-tight">
-                            Bhawani Technologies – Construction Chemicals Division (CCD)
+                            BHAWANI TECHNOLOGIES
                         </p>
 
                         {/* Heading */}
                         <h1 className="text-4xl sm:text-5xl md:text-[3.25rem] font-extrabold leading-[1.1] text-gray-900">
-                            Trading &amp; Application of{" "}
-                            <span className="text-green-600 block">Construction</span>
-                            <span className="text-green-600 block">Chemicals</span>
+                            A Complete{" "}
+                            <span className="text-green-600 block">Waterproofing</span>
+                            <span className="text-green-600 block">Solution</span>
                         </h1>
+
+                        {/* Subheading Badge */}
+                        <p className="text-xs md:text-sm font-bold text-green-700 uppercase tracking-wider">
+                            Professional Waterproofing Services — Supply &amp; Application
+                        </p>
 
                         {/* Description */}
                         <p className="text-gray-600 text-sm md:text-[0.95rem] leading-relaxed max-w-[420px]">
-                            We specialize in the professional trading and application of
-                            high-performance Construction Chemicals (Waterproofing &amp;
-                            Industrial Epoxy Floorings) tailored for residential, commercial,
-                            and industrial requirements.
+                            We specialize in the supply and application of high-performance waterproofing systems for residential, commercial, and industrial buildings. Our services include terrace waterproofing, basement waterproofing, bathroom waterproofing, water tank waterproofing, PU coating, epoxy flooring, crack repair, and injection grouting.
                         </p>
 
                         {/* 2-column feature checkmarks */}
@@ -169,7 +171,7 @@ export default function Hero() {
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-3 pt-1">
                             <a
-                                href="tel:+911234567890"
+                                href="tel:+917677779418"
                                 id="hero-call-btn"
                                 className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-sm"
                             >
