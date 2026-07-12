@@ -1,5 +1,5 @@
 import ServicesPreview from "@/components/sections/ServicesPreview";
-import Highlights from "@/components/sections/Highlights";
+import Projects from "@/components/sections/Projects";
 import ImageShowcase from "@/components/sections/ImageShowcase";
 import Brands from "@/components/sections/Brands";
 import GoogleReviews from "@/components/sections/GoogleReviews";
@@ -16,7 +16,7 @@ export default function Home() {
       <ServicesPreview />
       <ImageShowcase />
       <Brands />
-      {/* <Highlights /> */}
+      <Projects />
       <GoogleReviews />
       <Testimonials />
       <FindUs />
