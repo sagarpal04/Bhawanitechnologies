@@ -102,7 +102,7 @@ export default function Navbar() {
                     >
                         <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden bg-green-50 flex items-center justify-center border border-green-100">
                             <Image
-                                src="/BhawaniTechLogo.png"
+                                src="/logo-bhawani.png"
                                 alt="Bhawani Technologies"
                                 width={48}
                                 height={48}

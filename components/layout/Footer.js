@@ -17,7 +17,7 @@ export default function Footer() {
                         <Link href="/" className="flex items-center gap-3 md:gap-4 mb-4 md:mb-5 hover:opacity-80 transition-opacity">
                             <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-lg overflow-hidden bg-white/5 flex items-center justify-center">
                                 <img
-                                    src="/logo_bhawani.png"
+                                    src="/logo-bhawani.png"
                                     alt="Bhawani Technologies Logo"
                                     className="w-full h-full object-contain"
                                     onError={(e) => {

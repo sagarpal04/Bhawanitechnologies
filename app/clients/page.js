@@ -1,4 +1,5 @@
 import { Building2 } from "lucide-react";
+import Customers from "@/components/sections/Customers";
 
 export const metadata = {
     title: "Our Clients | Bhawani Technologies",
@@ -89,7 +90,7 @@ export default function ClientsPage() {
             </div>
 
             {/* Grid */}
-            <div className="container mx-auto px-6 md:px-12">
+            <div className="container mx-auto px-6 md:px-12 mb-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {testimonials.map((item, index) => (
                         <div key={index} className="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300">
@@ -107,6 +108,9 @@ export default function ClientsPage() {
                     ))}
                 </div>
             </div>
+
+            {/* Logo Grid Section */}
+            <Customers />
         </div>
     );
 }

@@ -5,6 +5,15 @@ import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import Image from "next/image";
 
 const projects = [
+    { src: "/bt/bt-1.jpeg" },
+    { src: "/bt/bt-2.jpeg" },
+    { src: "/bt/bt-3.jpeg" },
+    { src: "/bt/bt-4.jpeg" },
+    { src: "/bt/bt-5.jpeg" },
+    { src: "/bt/bt-6.jpeg" },
+    { src: "/bt/bt-7.jpeg" },
+    { src: "/bt/bt-8.jpeg" },
+    { src: "/bt/bt-9.jpeg" },
     { src: "/image-1.jpg" },
     { src: "/image-2.jpg" },
     { src: "/image-3.jpg" },

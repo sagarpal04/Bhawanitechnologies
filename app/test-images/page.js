@@ -14,8 +14,7 @@ export default function TestImages() {
         images.push(`/image-${i}.jpg`);
         images.push(`/image-${i}.png`);
     }
-    images.push("/BhawaniTechLogo.png");
-    images.push("/logo_bhawani.png");
+    images.push("/logo-bhawani.png");
     images.push("/logo.png");
 
     return (
