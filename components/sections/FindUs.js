@@ -146,18 +146,23 @@ export default function FindUs() {
                                     </div>
                                 </div>
 
-                                {/* Head Office */}
-                                <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-green-500/30 transition-all duration-300 group relative">
-                                    <div className="flex-shrink-0 w-11 h-11 bg-green-50/10 border border-green-500/20 text-green-500 rounded-xl flex items-center justify-center group-hover:bg-green-505 group-hover:text-white transition-colors duration-300">
+                                {/* Office Address */}
+                                <a 
+                                    href="https://maps.google.com/?q=C-288,+New+Ashok+Nagar,+Delhi,+Near+Rajdhani+Medical+Centre"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-start gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-green-500/30 transition-all duration-300 group relative block"
+                                >
+                                    <div className="flex-shrink-0 w-11 h-11 bg-green-500/10 border border-green-500/20 text-green-500 rounded-xl flex items-center justify-center group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
                                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
                                     </div>
                                     <div className="pr-8">
-                                        <h3 className="font-bold text-white text-base">Head Office</h3>
+                                        <h3 className="font-bold text-white text-base">Office Address</h3>
                                         <span className="text-slate-300 text-sm mt-0.5 block leading-relaxed">
-                                            Vandana Enclave, Shital Vihar, Khora Colony, Sector 62, Ghaziabad, Noida, Uttar Pradesh 201020
+                                            C-288, New Ashok Nagar, Delhi, Near Rajdhani Medical Centre
                                         </span>
                                     </div>
                                     <div className="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 group-hover:text-green-500 group-hover:translate-x-1 transition-all duration-300">
@@ -165,27 +170,7 @@ export default function FindUs() {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                                         </svg>
                                     </div>
-                                </div>
-
-                                {/* Branch Office */}
-                                <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-green-500/30 transition-all duration-300 group relative">
-                                    <div className="flex-shrink-0 w-11 h-11 bg-green-50/10 border border-green-500/20 text-green-500 rounded-xl flex items-center justify-center group-hover:bg-green-505 group-hover:text-white transition-colors duration-300">
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                                        </svg>
-                                    </div>
-                                    <div className="pr-8">
-                                        <h3 className="font-bold text-white text-base">Branch Office</h3>
-                                        <span className="text-slate-300 text-sm mt-0.5 block leading-relaxed">
-                                            H.No - S-319, School Block, Block S1, Shakarpur, Delhi - 110092
-                                        </span>
-                                    </div>
-                                    <div className="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 group-hover:text-green-500 group-hover:translate-x-1 transition-all duration-300">
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 

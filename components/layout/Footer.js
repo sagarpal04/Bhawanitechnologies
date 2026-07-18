@@ -66,9 +66,14 @@ export default function Footer() {
                         <ul className="space-y-3 md:space-y-4 text-sm text-gray-400">
                             <li className="flex items-start gap-3">
                                 <span className="mt-1">📍</span>
-                                <span className="text-gray-400">
-                                    Delhi NCR, India
-                                </span>
+                                <a 
+                                    href="https://maps.google.com/?q=C-288,+New+Ashok+Nagar,+Delhi,+Near+Rajdhani+Medical+Centre"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-400 hover:text-green-500 transition-colors leading-relaxed"
+                                >
+                                    C-288, New Ashok Nagar, Delhi, Near Rajdhani Medical Centre
+                                </a>
                             </li>
                             <li className="flex items-center gap-3">
                                 <span>📞</span>

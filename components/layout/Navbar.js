@@ -59,10 +59,15 @@ export default function Navbar() {
                     </div>
                     {/* Right: Location + Social */}
                     <div className="flex items-center gap-5">
-                        <span className="flex items-center gap-1.5 text-gray-300">
+                        <a 
+                            href="https://maps.google.com/?q=C-288,+New+Ashok+Nagar,+Delhi,+Near+Rajdhani+Medical+Centre"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1.5 text-gray-300 hover:text-green-400 transition-colors"
+                        >
                             <MapPin size={12} />
-                            Delhi NCR, India
-                        </span>
+                            <span>Delhi NCR, India</span>
+                        </a>
                         <div className="flex items-center gap-3 ml-2">
                             {/* Facebook */}
                             <a href="#" aria-label="Facebook" className="hover:text-green-400 transition-colors">
