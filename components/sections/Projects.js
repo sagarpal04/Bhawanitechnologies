@@ -3,78 +3,54 @@
 import { useState, useMemo } from "react";
 import {
     Home, Building2, Factory, Waves, Plane, Sparkles, Shield,
-    Search, ChevronLeft, ChevronRight, Briefcase, Play, Wrench,
-    CheckCircle2, Construction, Layers, Box, Info
+    Search, ChevronLeft, ChevronRight, Briefcase, Play,
+    Construction, Layers, Box, Info
 } from "lucide-react";
 
-// 25 Completed Projects
+// 23 Completed Projects (waterproofing only)
 const completedProjects = [
-    { id: "01", project: "Aarohi Society", client: "Aarohi Society", service: "Repair & Retrofitting", value: "₹62,00,000", year: "2014-15" },
-    { id: "02", project: "BP Sangle", client: "MSPHC", service: "Waterproofing", value: "₹72,00,000", year: "2014-15" },
-    { id: "03", project: "PTC Dulahay", client: "MSPHC", service: "APP Waterproofing", value: "₹42,00,000", year: "2017-18" },
-    { id: "04", project: "SRP Camp Jana", client: "Kunal Structure", service: "Waterproofing", value: "₹1,50,00,000", year: "2017-18" },
-    { id: "05", project: "SP Office Police Staff Quarter (Chiplun)", client: "MSPHC", service: "APP Waterproofing", value: "₹32,00,000", year: "2017-18" },
-    { id: "06", project: "Regency Tower", client: "Regency Tower Members", service: "Waterproofing Retrofitting", value: "₹16,00,000", year: "2017-18" },
-    { id: "07", project: "Metro Project Line 7", client: "J.Kumar Infraproject", service: "Civil Work", value: "₹20,00,000", year: "2018-19" },
-    { id: "08", project: "SP Office & Quarter, Administrative Building (Osmanabad)", client: "Dhansmurti Wildcone Pvt. Ltd.", service: "PU Waterproofing", value: "₹12,00,000", year: "2020-21" },
-    { id: "09", project: "Police Headquarters (Beed)", client: "Dhansmurti Wildcone Pvt. Ltd.", service: "PU Waterproofing", value: "₹18,00,000", year: "2020-21" },
-    { id: "10", project: "Police Quarter (Qandeshwar)", client: "Dhansmurti Wildcone Pvt. Ltd.", service: "PU Waterproofing", value: "₹28,00,000", year: "2020-21" },
-    { id: "11", project: "SDPO Office & Quarter (Dariyapur)", client: "Dhansmurti Wildcone Pvt. Ltd.", service: "PU Waterproofing", value: "₹18,00,000", year: "2021-22" },
-    { id: "12", project: "FWS Warehouse (Najafgarh)", client: "Akansha Construction", service: "HDPE Waterproofing", value: "₹40,00,000", year: "2021-22" },
-    { id: "13", project: "BPO Tower Tech City (Assam)", client: "SNS Infracon Pvt. Ltd.", service: "HDPE Membrane Waterproofing", value: "₹72,00,000", year: "2021-22" },
-    { id: "14", project: "SRF (Chiplun, Maharashtra)", client: "Maharashtra Police", service: "APP Membrane Waterproofing", value: "₹32,47,000", year: "2016-17" },
-    { id: "15", project: "Brooks Laboratories", client: "Brooks Steriscience Plant (Vadodara)", service: "TPO Membrane Waterproofing", value: "₹42,76,000", year: "2022-23" },
-    { id: "16", project: "BECIL Project", client: "Spectrum Broadcast Infrastructure", service: "HDPE Membrane Waterproofing", value: "₹46,02,590", year: "2023-24" },
-    { id: "17", project: "Havells SDA Expansion (Haridwar)", client: "Narander Construction", service: "EPDM Waterproofing", value: "₹34,22,336", year: "2023-24" },
-    { id: "18", project: "MILLP – UMBM Bawal", client: "Minda Infrastructure", service: "Waterproofing", value: "₹24,78,000", year: "2023-24" },
-    { id: "19", project: "Havells Neemrana", client: "Minda Infrastructure", service: "TPO Waterproofing", value: "₹4,36,584", year: "2023-24" },
-    { id: "20", project: "Novelty Street", client: "Asteroid Shelters", service: "HDPE Membrane Waterproofing", value: "₹18,67,012", year: "2023-24" },
-    { id: "21", project: "L&T IT Park, Faridabad", client: "Disha Construction", service: "HDPE Membrane Waterproofing", value: "₹73,89,868", year: "2023-24" },
-    { id: "22", project: "Spectrum Phase-2 (Sector-75, Noida)", client: "Disha Construction", service: "Roof Waterproofing", value: "₹71,51,980", year: "2024-25" },
-    { id: "23", project: "Sawasdee Gems (Paschim Vihar, Delhi)", client: "Panch Tatva Promoters", service: "D-Wall Waterproofing", value: "₹10,51,380", year: "2024-25" },
-    { id: "24", project: "Sharda University", client: "RSPL", service: "Waterproofing", value: "₹18,85,000", year: "2024-25" },
-    { id: "25", project: "Venkateshwara Hospital (Rohini, Delhi)", client: "WG Constructions", service: "Waterproofing", value: "₹85,00,000", year: "2024-25" }
+    { id: "01", project: "BP Sangle", client: "MSPHC", service: "Waterproofing", year: "2014-15" },
+    { id: "02", project: "PTC Dulahay", client: "MSPHC", service: "APP Waterproofing", year: "2017-18" },
+    { id: "03", project: "SRP Camp Jana", client: "Kunal Structure", service: "Waterproofing", year: "2017-18" },
+    { id: "04", project: "SP Office Police Staff Quarter (Chiplun)", client: "MSPHC", service: "APP Waterproofing", year: "2017-18" },
+    { id: "05", project: "Regency Tower", client: "Regency Tower Members", service: "Waterproofing Retrofitting", year: "2017-18" },
+    { id: "06", project: "SP Office & Quarter, Administrative Building (Osmanabad)", client: "Dhansmurti Wildcone Pvt. Ltd.", service: "PU Waterproofing", year: "2020-21" },
+    { id: "07", project: "Police Headquarters (Beed)", client: "Dhansmurti Wildcone Pvt. Ltd.", service: "PU Waterproofing", year: "2020-21" },
+    { id: "08", project: "Police Quarter (Qandeshwar)", client: "Dhansmurti Wildcone Pvt. Ltd.", service: "PU Waterproofing", year: "2020-21" },
+    { id: "09", project: "SDPO Office & Quarter (Dariyapur)", client: "Dhansmurti Wildcone Pvt. Ltd.", service: "PU Waterproofing", year: "2021-22" },
+    { id: "10", project: "FWS Warehouse (Najafgarh)", client: "Akansha Construction", service: "HDPE Waterproofing", year: "2021-22" },
+    { id: "11", project: "BPO Tower Tech City (Assam)", client: "SNS Infracon Pvt. Ltd.", service: "HDPE Membrane Waterproofing", year: "2021-22" },
+    { id: "12", project: "SRF (Chiplun, Maharashtra)", client: "Maharashtra Police", service: "APP Membrane Waterproofing", year: "2016-17" },
+    { id: "13", project: "Brooks Laboratories", client: "Brooks Steriscience Plant (Vadodara)", service: "TPO Membrane Waterproofing", year: "2022-23" },
+    { id: "14", project: "BECIL Project", client: "Spectrum Broadcast Infrastructure", service: "HDPE Membrane Waterproofing", year: "2023-24" },
+    { id: "15", project: "Havells SDA Expansion (Haridwar)", client: "Narander Construction", service: "EPDM Waterproofing", year: "2023-24" },
+    { id: "16", project: "MILLP – UMBM Bawal", client: "Minda Infrastructure", service: "Waterproofing", year: "2023-24" },
+    { id: "17", project: "Havells Neemrana", client: "Minda Infrastructure", service: "TPO Waterproofing", year: "2023-24" },
+    { id: "18", project: "Novelty Street", client: "Asteroid Shelters", service: "HDPE Membrane Waterproofing", year: "2023-24" },
+    { id: "19", project: "L&T IT Park, Faridabad", client: "Disha Construction", service: "HDPE Membrane Waterproofing", year: "2023-24" },
+    { id: "20", project: "Spectrum Phase-2 (Sector-75, Noida)", client: "Disha Construction", service: "Roof Waterproofing", year: "2024-25" },
+    { id: "21", project: "Sawasdee Gems (Paschim Vihar, Delhi)", client: "Panch Tatva Promoters", service: "D-Wall Waterproofing", year: "2024-25" },
+    { id: "22", project: "Sharda University", client: "RSPL", service: "Waterproofing", year: "2024-25" },
+    { id: "23", project: "Venkateshwara Hospital (Rohini, Delhi)", client: "WG Constructions", service: "Waterproofing", year: "2024-25" }
 ];
 
 // 12 Ongoing Projects
 const ongoingProjects = [
-    { id: "01", project: "City of Dreams", client: "SBP Housing Pvt. Ltd.", service: "HDPE Waterproofing", value: "₹10,38,400", status: "Running" },
-    { id: "02", project: "M3M (Sector-71, Gurgaon)", client: "Broadway", service: "Waterproofing", value: "₹1,34,55,429", status: "Running" },
-    { id: "03", project: "Unitech Amber (External)", client: "Svarnim Infrastructures Pvt. Ltd.", service: "Crystalline Waterproofing", value: "₹2,13,75,232", status: "Running" },
-    { id: "04", project: "Tamil Nadu House", client: "SKYGRID", service: "HDPE + SBS Waterproofing", value: "₹65,49,000", status: "Running" },
-    { id: "05", project: "Guwahati Airport, Assam", client: "PK & Company", service: "HDPE Waterproofing", value: "₹74,34,000", status: "Running" },
-    { id: "06", project: "Star City", client: "Star City Infra Developers", service: "HDPE + SBS Waterproofing", value: "₹50,600", status: "Running" },
-    { id: "07", project: "Sahu City", client: "Sahu Land Developers", service: "HDPE + SBS Waterproofing", value: "₹1,25,55,790", status: "Running" },
-    { id: "08", project: "MRG Crown", client: "MRG Group", service: "HDPE + SBS Waterproofing", value: "₹20,67,960", status: "Running" },
-    { id: "09", project: "MES Projects", client: "SOM Projects Pvt. Ltd.", service: "HDPE + Crystalline Waterproofing", value: "₹21,66,480", status: "Running" },
-    { id: "10", project: "Unitech Burgundy", client: "Svarnim Infrastructures Pvt. Ltd.", service: "Crystalline Waterproofing", value: "₹11,28,75,600", status: "Running" },
-    { id: "11", project: "F Tower, Ludhiana", client: "SBP Housing Pvt. Ltd.", service: "HDPE Waterproofing", value: "₹35,00,000", status: "Running" },
-    { id: "12", project: "FH1 Farm House", client: "Waltham Constructions & Management Services", service: "HDPE Waterproofing", value: "₹24,78,000", status: "Running" }
+    { id: "01", project: "City of Dreams", client: "SBP Housing Pvt. Ltd.", service: "HDPE Waterproofing", status: "Running" },
+    { id: "02", project: "M3M (Sector-71, Gurgaon)", client: "Broadway", service: "Waterproofing", status: "Running" },
+    { id: "03", project: "Unitech Amber (External)", client: "Svarnim Infrastructures Pvt. Ltd.", service: "Crystalline Waterproofing", status: "Running" },
+    { id: "04", project: "Tamil Nadu House", client: "SKYGRID", service: "HDPE + SBS Waterproofing", status: "Running" },
+    { id: "05", project: "Guwahati Airport, Assam", client: "PK & Company", service: "HDPE Waterproofing", status: "Running" },
+    { id: "06", project: "Star City", client: "Star City Infra Developers", service: "HDPE + SBS Waterproofing", status: "Running" },
+    { id: "07", project: "Sahu City", client: "Sahu Land Developers", service: "HDPE + SBS Waterproofing", status: "Running" },
+    { id: "08", project: "MRG Crown", client: "MRG Group", service: "HDPE + SBS Waterproofing", status: "Running" },
+    { id: "09", project: "MES Projects", client: "SOM Projects Pvt. Ltd.", service: "HDPE + Crystalline Waterproofing", status: "Running" },
+    { id: "10", project: "Unitech Burgundy", client: "Svarnim Infrastructures Pvt. Ltd.", service: "Crystalline Waterproofing", status: "Running" },
+    { id: "11", project: "F Tower, Ludhiana", client: "SBP Housing Pvt. Ltd.", service: "HDPE Waterproofing", status: "Running" },
+    { id: "12", project: "FH1 Farm House", client: "Waltham Constructions & Management Services", service: "HDPE Waterproofing", status: "Running" }
 ];
 
-// 20 Equipment list items
-const equipmentList = [
-    { name: "Concrete Mixture Machine / Weight Batching Plant", units: "06" },
-    { name: "Gunniting/Shotcreting Pressure Machine", units: "03" },
-    { name: "Drilling & Breaker Machine (Heavy & Light)", units: "65" },
-    { name: "Injection Grouting Pump (Electrical & Hand)", units: "10" },
-    { name: "Lightweight Foam Concrete Plant", units: "02" },
-    { name: "Material Shifting Lift", units: "03" },
-    { name: "Shuttering & Scaffolding", units: "100 Sqmt." },
-    { name: "Silicone Water Repellent Spraying Machine", units: "05" },
-    { name: "Light Air Compressor", units: "05" },
-    { name: "Chase Cutting Machine", units: "02" },
-    { name: "Diamond Sawing/Cutting Machine (Floor Saw & Wire Saw)", units: "02" },
-    { name: "Electric Welding Machine", units: "06" },
-    { name: "Epoxy & PU Grouting Machine", units: "04" },
-    { name: "Automatic Foam Concrete Plant (Pumping up to 60 mtr. Height)", units: "02" },
-    { name: "HDPE Lining Welding Machine", units: "20" },
-    { name: "Hot Air Gun Welding Machine", units: "05" },
-    { name: "PVC Membrane Welding Machine", units: "06" },
-    { name: "HDPE Automatic Welding Machine", units: "14" },
-    { name: "Diamond Core Cutting Machine", units: "10" },
-    { name: "Polyurea & PUF Machine", units: "02" }
-];
+
 
 // 10 Industries Served
 const industries = [
@@ -179,17 +155,7 @@ export default function Projects() {
                         <Play size={16} />
                         Live Projects
                     </button>
-                    <button
-                        onClick={() => handleTabChange("equipment")}
-                        className={`flex items-center gap-2 px-4 py-2.5 md:px-6 md:py-3.5 rounded-xl md:rounded-2xl text-xs md:text-sm font-bold tracking-wide transition-all cursor-pointer ${
-                            activeTab === "equipment"
-                                ? "bg-emerald-600 text-white shadow-md shadow-emerald-600/10 scale-102"
-                                : "text-slate-600 hover:text-emerald-600 hover:bg-emerald-50/50"
-                        }`}
-                    >
-                        <Wrench size={16} />
-                        Machinery & Equipment
-                    </button>
+
                     <button
                         onClick={() => handleTabChange("industries")}
                         className={`flex items-center gap-2 px-4 py-2.5 md:px-6 md:py-3.5 rounded-xl md:rounded-2xl text-xs md:text-sm font-bold tracking-wide transition-all cursor-pointer ${
@@ -201,6 +167,7 @@ export default function Projects() {
                         <Home size={16} />
                         Industries We Serve
                     </button>
+
                 </div>
 
                 {/* Tab Contents */}
@@ -264,7 +231,7 @@ export default function Projects() {
                                             <th className="py-4.5 px-6 min-w-[180px]">Project</th>
                                             <th className="py-4.5 px-6 min-w-[160px]">Client</th>
                                             <th className="py-4.5 px-6 min-w-[160px]">Service Applied</th>
-                                            <th className="py-4.5 px-6 whitespace-nowrap text-right min-w-[130px]">Project Value</th>
+
                                             {activeTab === "completed" ? (
                                                 <th className="py-4.5 px-6 whitespace-nowrap text-center min-w-[110px]">Year</th>
                                             ) : (
@@ -287,7 +254,7 @@ export default function Projects() {
                                                             {row.service}
                                                         </span>
                                                     </td>
-                                                    <td className="py-4 px-6 text-right font-bold text-slate-950">{row.value}</td>
+
                                                     <td className="py-4 px-6 text-center">
                                                         {activeTab === "completed" ? (
                                                             <span className="text-slate-500 font-semibold">{row.year}</span>
@@ -358,46 +325,7 @@ export default function Projects() {
                         </div>
                     )}
 
-                    {activeTab === "equipment" && (
-                        <div>
-                            {/* Sub header context */}
-                            <div className="mb-10 bg-white border border-slate-100 shadow-sm rounded-3xl p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
-                                <div className="max-w-2xl">
-                                    <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 mb-2">Fully Equipped for Every Job</h3>
-                                    <p className="text-sm text-gray-500 leading-relaxed">
-                                        Our extensive inventory of specialized tools and machinery allows us to execute projects of any scale — with precision, speed, and consistent quality on every site.
-                                    </p>
-                                </div>
-                                <div className="shrink-0 self-start md:self-center">
-                                    <span className="inline-block bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs md:text-sm font-bold px-4 py-2 rounded-2xl shadow-sm">
-                                        Expert Waterproofing Solutions — Powered by the Right Machinery
-                                    </span>
-                                </div>
-                            </div>
 
-                            {/* Equipment Card Grid */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                                {equipmentList.map((item, idx) => (
-                                    <div
-                                        key={idx}
-                                        className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex items-start justify-between gap-4 group"
-                                    >
-                                        <div className="space-y-2">
-                                            <div className="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
-                                                <Wrench size={16} />
-                                            </div>
-                                            <h4 className="text-xs md:text-sm font-extrabold text-slate-900 group-hover:text-emerald-700 transition-colors leading-tight whitespace-normal">
-                                                {item.name}
-                                            </h4>
-                                        </div>
-                                        <div className="shrink-0 flex items-center justify-center bg-slate-900 text-white font-extrabold text-xs md:text-sm w-9 h-9 md:w-11 md:h-11 rounded-full shadow-inner border border-slate-800">
-                                            {item.units}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    )}
 
                     {activeTab === "industries" && (
                         <div>
@@ -435,6 +363,8 @@ export default function Projects() {
                             </div>
                         </div>
                     )}
+
+
                 </div>
             </div>
         </section>

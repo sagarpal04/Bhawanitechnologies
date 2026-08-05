@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Award, ShieldCheck, Trophy, BadgeAlert } from "lucide-react";
@@ -8,47 +8,61 @@ import { Award, ShieldCheck, Trophy, BadgeAlert } from "lucide-react";
 const awards = [
     {
         id: 1,
-        title: "Excellence in Structural Waterproofing",
-        organization: "National Construction Association",
-        year: "2025",
+        title: "Best Waterproofing Contractor",
+        organization: "Signature Club",
+        year: "Award",
         image: "aw1.jpeg",
-        description: "Recognized for delivering outstanding waterproofing solutions for complex commercial basements.",
+        description: "Bhawani Technologies is proud to be recognized by Signature Club as one of the Best Waterproofing Contractors in Delhi NCR. This recognition reflects our commitment to quality workmanship, advanced waterproofing solutions, and customer satisfaction. Our team uses premium materials and modern techniques to deliver long-lasting, reliable waterproofing solutions for residential, commercial, and industrial projects across Delhi, Noida, Ghaziabad, Greater Noida, Gurgaon, and the entire NCR.",
+        tagline: "Trusted. Awarded. Proven.",
+        specializations: ["Terrace Waterproofing", "Roof Waterproofing", "Basement Waterproofing", "Bathroom Waterproofing", "Wall Leakage Repair", "PU Injection Grouting", "Structural Waterproofing", "Crack Repair & Building Protection"],
         icon: Trophy,
         badgeColor: "text-amber-500 bg-amber-50 border-amber-100"
     },
     {
         id: 2,
-        title: "Best Industrial Contractor Award",
-        organization: "Industrial Infrastructure Forum",
-        year: "2024",
+        title: "Dr. Fixit Certified Skilled Waterproofer",
+        organization: "Dr. Fixit",
+        year: "Certification",
         image: "aw2.png",
-        description: "Awarded for excellence in industrial epoxy flooring and high-performance protective coatings.",
-        icon: Award,
+        description: "Bhawani Technologies is a Dr. Fixit Certified Skilled Waterproofer, recognized for delivering high-quality waterproofing solutions using industry-approved materials and best practices. This certification demonstrates our expertise, technical knowledge, and commitment to providing reliable and long-lasting waterproofing services across Delhi, Noida, Ghaziabad, Greater Noida, Gurugram, and NCR.",
+        tagline: "Certified Expertise. Trusted Quality. Long-Lasting Protection.",
+        specializations: ["Terrace & Roof Waterproofing", "Basement Waterproofing", "Bathroom & Toilet Waterproofing", "Wall Leakage & Seepage Treatment", "PU Injection Grouting", "Crack Repair & Structural Waterproofing", "Commercial & Industrial Waterproofing", "Building Protection Solutions"],
+        icon: ShieldCheck,
         badgeColor: "text-green-600 bg-green-50 border-green-100"
     },
     {
         id: 3,
-        title: "Safety & Quality Compliance Certificate",
-        organization: "Safety Standards Bureau",
-        year: "2024",
+        title: "Dr. Fixit Skilled Waterproofer",
+        organization: "Dr. Fixit",
+        year: "Milestone 🏆",
         image: "aw3.jpeg",
-        description: "Certified for maintaining top-tier safety protocols and 100% material quality compliance across all sites.",
-        icon: ShieldCheck,
+        description: "Another milestone achieved! Bhawani Technologies is honored to receive the Dr. Fixit Skilled Waterproofer certification. Thank you to our clients and partners for your trust and support. We remain committed to delivering durable, high-quality waterproofing and building protection solutions.",
+        tagline: null,
+        specializations: [],
+        icon: Award,
         badgeColor: "text-blue-600 bg-blue-50 border-blue-100"
     },
     {
         id: 4,
-        title: "Innovation in Waterproofing Technology",
-        organization: "Concrete Technology Council",
-        year: "2023",
+        title: "Champion Waterproofer Award",
+        organization: "Pidilite Dr. Fixit",
+        year: "Award",
         image: "aw4.jpeg",
-        description: "Honored for pioneering advanced crystalline waterproofing applications in high groundwater conditions.",
-        icon: Award,
+        description: "Bhawani Technologies is proud to have been recognized by Pidilite Dr. Fixit as a Champion Waterproofer, honoring our dedication to excellence in waterproofing and customer satisfaction. This prestigious recognition reflects our commitment to delivering high-quality waterproofing solutions, using trusted materials, skilled workmanship, and industry best practices across Delhi NCR.",
+        tagline: "Award-Winning Expertise. Trusted Quality. Proven Performance.",
+        specializations: ["Terrace & Roof Waterproofing", "Basement Waterproofing", "Bathroom Waterproofing", "PU Injection Grouting", "Crack Repair", "Structural Waterproofing", "Building Protection Solutions"],
+        icon: BadgeAlert,
         badgeColor: "text-purple-600 bg-purple-50 border-purple-100"
     }
 ];
 
 export default function Awards() {
+    const [expandedId, setExpandedId] = useState(null);
+
+    const toggleExpand = (id) => {
+        setExpandedId(prev => prev === id ? null : id);
+    };
+
     return (
         <section className="py-16 md:py-24 bg-white border-t border-slate-100 overflow-hidden">
             <div className="container mx-auto px-4 md:px-12 max-w-6xl">
@@ -69,6 +83,11 @@ export default function Awards() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                     {awards.map((award, idx) => {
                         const IconComponent = award.icon;
+                        const isExpanded = expandedId === award.id;
+                        const shortDesc = award.description.length > 120
+                            ? award.description.slice(0, 120).trimEnd() + "…"
+                            : award.description;
+
                         return (
                             <motion.div
                                 key={award.id}
@@ -111,16 +130,38 @@ export default function Awards() {
                                             {award.organization}
                                         </p>
 
-                                        {/* Description */}
-                                        <p className="text-slate-600 text-sm md:text-sm leading-relaxed">
-                                            {award.description}
+                                        {/* Description — truncated by default */}
+                                        <p className="text-slate-600 text-sm leading-relaxed">
+                                            {isExpanded ? award.description : shortDesc}
                                         </p>
+
+                                        {/* Specializations — only when expanded */}
+                                        {isExpanded && award.specializations && award.specializations.length > 0 && (
+                                            <ul className="mt-3 grid grid-cols-1 gap-1">
+                                                {award.specializations.map((s, i) => (
+                                                    <li key={i} className="flex items-center gap-1.5 text-xs text-slate-700 font-medium">
+                                                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 shrink-0" />
+                                                        {s}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+
+                                        {/* Read More / Less toggle */}
+                                        {award.description.length > 120 && (
+                                            <button
+                                                onClick={() => toggleExpand(award.id)}
+                                                className="mt-2 text-xs font-bold text-green-600 hover:text-green-700 transition-colors cursor-pointer"
+                                            >
+                                                {isExpanded ? "Read Less ↑" : "Read More ↓"}
+                                            </button>
+                                        )}
                                     </div>
 
-                                    {/* Action/Decoration Indicator */}
+                                    {/* Tagline footer */}
                                     <div className="mt-6 flex items-center justify-between border-t border-slate-200/50 pt-4">
-                                        <span className="text-xs font-bold text-green-600 tracking-wider uppercase group-hover:translate-x-1 transition-transform duration-300 inline-flex items-center gap-1">
-                                            Certified Excellence
+                                        <span className="text-xs font-bold text-green-600 tracking-wider uppercase inline-flex items-center gap-1">
+                                            {award.tagline ? award.tagline : "Certified Excellence"}
                                         </span>
                                     </div>
                                 </div>

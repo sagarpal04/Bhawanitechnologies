@@ -49,7 +49,7 @@ export default function Brands() {
                                     src={`/logos/${logo}`}
                                     alt="Brand Logo"
                                     fill
-                                    className="object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 p-2"
+                                    className="object-contain hover:opacity-100 transition-opacity duration-300 p-2"
                                     sizes="(max-width: 768px) 128px, 160px"
                                     onError={() => {
                                         console.log('Failed to load:', logo);

@@ -4,23 +4,22 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// Sample customer logos using the leading brand logo images as requested
 const customerLogos = [
-    { id: 1, name: "Client Partner 1", logo: "ct-1.png" },
-    { id: 2, name: "Client Partner 2", logo: "ct-2.png" },
-    { id: 3, name: "Client Partner 3", logo: "ct-3.png" },
-    { id: 4, name: "Client Partner 4", logo: "ct-4.png" },
-    { id: 5, name: "Client Partner 5", logo: "ct-5.png" },
-    { id: 6, name: "Client Partner 6", logo: "ct-6.png" },
-    { id: 7, name: "Client Partner 7", logo: "ct-7.png" },
-    { id: 8, name: "Client Partner 8", logo: "ct-8.png" },
-    { id: 9, name: "Client Partner 9", logo: "ct-9.png" },
-    { id: 10, name: "Client Partner 10", logo: "ct-10.png" },
-    { id: 11, name: "Client Partner 11", logo: "ct-11.png" },
-    { id: 12, name: "Client Partner 12", logo: "ct-12.png" },
-    { id: 13, name: "Client Partner 13", logo: "ct-13.png" },
-    { id: 14, name: "Client Partner 14", logo: "ct-14.png" },
-    { id: 15, name: "Client Partner 15", logo: "ct-15.png" },
+    { id: 1,  name: "Medico Electrodes",                  logo: "ct-1.png" },
+    { id: 2,  name: "HCL",                                logo: "ct-2.png" },
+    { id: 3,  name: "M2K",                                logo: "ct-3.png" },
+    { id: 4,  name: "Nirala TRISO",                       logo: "ct-4.png" },
+    { id: 5,  name: "Uno Minda",                          logo: "ct-5.png" },
+    { id: 6,  name: "Motherson",                          logo: "ct-6.png" },
+    { id: 7,  name: "Marg ERP9+",                         logo: "ct-7.png" },
+    { id: 8,  name: "CRPF",                               logo: "ct-8.png" },
+    { id: 9,  name: "Gyanodaya College of Education",     logo: "ct-9.png" },
+    { id: 10, name: "Salasar Logistics",                  logo: "ct-10.png" },
+    { id: 11, name: "Pustak Mahal",                       logo: "ct-11.png" },
+    { id: 12, name: "Siddho Mal Group",                   logo: "ct-12.png" },
+    { id: 13, name: "Inmantec Institutions",              logo: "ct-13.png" },
+    { id: 14, name: "Assotech",                           logo: "ct-14.png" },
+    { id: 15, name: "ABF – Assotech Business Cresterra", logo: "ct-15.png" },
 ];
 
 export default function Customers() {
@@ -49,25 +48,31 @@ export default function Customers() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.4, delay: idx * 0.05 }}
-                            whileHover={{ 
+                            whileHover={{
                                 y: -6,
                                 scale: 1.02,
                                 boxShadow: "0 12px 20px -8px rgba(0, 0, 0, 0.08)",
                                 borderColor: "#22c55e"
                             }}
-                            className="flex items-center justify-center h-24 md:h-28 bg-white rounded-xl border border-slate-100 p-4 relative group transition-colors duration-300 cursor-pointer shadow-sm animate-fade-in"
+                            className="flex flex-col items-center justify-between bg-white rounded-xl border border-slate-100 p-4 pt-5 relative group transition-colors duration-300 cursor-pointer shadow-sm"
                         >
-                            <div className="relative w-full h-full">
+                            {/* Logo */}
+                            <div className="relative w-full h-20 md:h-24 mb-3">
                                 <Image
                                     src={`/ct/${item.logo}`}
                                     alt={item.name}
                                     fill
-                                    className="object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 p-1"
+                                    className="object-contain transition-all duration-300 p-1"
                                     sizes="(max-width: 768px) 120px, 150px"
                                 />
                             </div>
-                            
-                            {/* Subtle card overlay element */}
+
+                            {/* Name */}
+                            <p className="text-[10px] md:text-xs font-semibold text-slate-600 text-center leading-tight line-clamp-2 group-hover:text-green-700 transition-colors duration-300">
+                                {item.name}
+                            </p>
+
+                            {/* Bottom accent bar */}
                             <div className="absolute inset-x-0 bottom-0 h-1 bg-transparent group-hover:bg-green-500 rounded-b-xl transition-all duration-300" />
                         </motion.div>
                     ))}
