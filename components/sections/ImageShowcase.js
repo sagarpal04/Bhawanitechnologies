@@ -8,7 +8,6 @@ const projects = [
     { src: "/bt/bt-1.jpeg" },
     { src: "/bt/bt-2.jpeg" },
     { src: "/bt/bt-3.jpeg" },
-    { src: "/bt/bt-4.jpeg" },
     { src: "/bt/bt-5.jpeg" },
     { src: "/bt/bt-6.jpeg" },
     { src: "/bt/bt-7.jpeg" },
