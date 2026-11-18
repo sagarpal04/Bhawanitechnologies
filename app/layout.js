@@ -78,6 +78,9 @@ const localBusinessSchema = {
   sameAs: [
     "https://maps.google.com/?q=C-288,+New+Ashok+Nagar,+Delhi",
     "https://www.bhawanitechnologies.in",
+    "https://www.instagram.com/bhawani_technologies01",
+    "https://www.facebook.com/share/1LECb6Y3Fv/",
+    "https://www.linkedin.com/in/bhawani-technologies-a47407423",
   ],
 };
 
