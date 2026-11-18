@@ -6,13 +6,13 @@ export const metadata = {
     description:
         "10+ years, 500+ projects. Bhawani Technologies is Delhi NCR's trusted waterproofing company specialising in high-performance waterproofing systems, epoxy flooring & construction chemicals. Free site inspection.",
     alternates: {
-        canonical: "https://bhawanitechnologies01.com/about",
+        canonical: "https://www.bhawanitechnologies.in/about",
     },
     openGraph: {
         title: "About Bhawani Technologies | Waterproofing Experts in Delhi NCR",
         description:
             "10+ years experience, 500+ completed projects. Expert waterproofing & construction chemical solutions across Delhi NCR.",
-        url: "https://bhawanitechnologies01.com/about",
+        url: "https://www.bhawanitechnologies.in/about",
     },
 };
 

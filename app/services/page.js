@@ -6,13 +6,13 @@ export const metadata = {
     description:
         "Complete waterproofing & construction chemical services in Delhi NCR — industrial epoxy flooring, APP/EPDM membranes, PU injection grouting, joint sealants, geotextiles & corrosion protection. Free inspection. Call +91 76777 79418.",
     alternates: {
-        canonical: "https://bhawanitechnologies01.com/services",
+        canonical: "https://www.bhawanitechnologies.in/services",
     },
     openGraph: {
         title: "Waterproofing & Epoxy Flooring Services in Delhi NCR | Bhawani Technologies",
         description:
             "Industrial epoxy flooring, waterproofing membranes, injection grouting, joint sealants & more. Expert application across Delhi NCR. Free site inspection.",
-        url: "https://bhawanitechnologies01.com/services",
+        url: "https://www.bhawanitechnologies.in/services",
     },
 };
 

@@ -5,6 +5,6 @@ export default function robots() {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://bhawanitechnologies01.com/sitemap.xml',
+        sitemap: 'https://www.bhawanitechnologies.in/sitemap.xml',
     }
 }

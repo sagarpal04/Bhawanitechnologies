@@ -6,13 +6,13 @@ export const metadata = {
     description:
         "500+ completed projects. Bhawani Technologies has served leading companies including M3M, Thapar University, GST Bhawan, M2K Entertainment & more across Delhi NCR for waterproofing & epoxy flooring.",
     alternates: {
-        canonical: "https://bhawanitechnologies01.com/clients",
+        canonical: "https://www.bhawanitechnologies.in/clients",
     },
     openGraph: {
         title: "Trusted Clients & Projects | Bhawani Technologies Delhi",
         description:
             "Trusted by industry leaders across Delhi NCR. 500+ waterproofing & industrial flooring projects for residential, commercial & government clients.",
-        url: "https://bhawanitechnologies01.com/clients",
+        url: "https://www.bhawanitechnologies.in/clients",
     },
 };
 

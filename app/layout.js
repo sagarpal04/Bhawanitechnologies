@@ -10,11 +10,11 @@ import { Analytics } from "@vercel/analytics/next";
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://bhawanitechnologies01.com/#localbusiness",
+  "@id": "https://www.bhawanitechnologies.in/#localbusiness",
   name: "Bhawani Technologies",
   description:
     "Bhawani Technologies is Delhi NCR's trusted waterproofing company specialising in terrace, basement, bathroom & water tank waterproofing, epoxy flooring, injection grouting, and construction chemicals.",
-  url: "https://bhawanitechnologies01.com",
+  url: "https://www.bhawanitechnologies.in",
   telephone: "+917677779418",
   email: "bhawanitechnologies01@gmail.com",
   address: {
@@ -77,13 +77,14 @@ const localBusinessSchema = {
   ],
   sameAs: [
     "https://maps.google.com/?q=C-288,+New+Ashok+Nagar,+Delhi",
+    "https://www.bhawanitechnologies.in",
   ],
 };
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
-  metadataBase: new URL("https://bhawanitechnologies01.com"),
+  metadataBase: new URL("https://www.bhawanitechnologies.in"),
   title: {
     default: "Bhawani Technologies | #1 Waterproofing Service in Delhi NCR",
     template: "%s | Bhawani Technologies",
@@ -110,12 +111,12 @@ export const metadata = {
     "APP membrane waterproofing",
     "EPDM membrane Delhi",
   ],
-  authors: [{ name: "Bhawani Technologies", url: "https://bhawanitechnologies01.com" }],
+  authors: [{ name: "Bhawani Technologies", url: "https://www.bhawanitechnologies.in" }],
   creator: "Bhawani Technologies",
   publisher: "Bhawani Technologies",
   formatDetection: { telephone: true, email: true, address: true },
   alternates: {
-    canonical: "https://bhawanitechnologies01.com",
+    canonical: "https://www.bhawanitechnologies.in",
   },
   openGraph: {
     title: "Bhawani Technologies | #1 Waterproofing Service in Delhi NCR",
@@ -123,7 +124,7 @@ export const metadata = {
       "Expert waterproofing and industrial epoxy flooring solutions for residential, commercial & industrial projects in Delhi NCR. Free site inspection. 500+ projects completed.",
     type: "website",
     locale: "en_IN",
-    url: "https://bhawanitechnologies01.com",
+    url: "https://www.bhawanitechnologies.in",
     siteName: "Bhawani Technologies",
   },
   twitter: {

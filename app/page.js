@@ -14,13 +14,13 @@ export const metadata = {
   description:
     "Bhawani Technologies — Delhi NCR's #1 waterproofing company. Terrace, basement, bathroom & water tank waterproofing, epoxy flooring, injection grouting. Free site inspection. 500+ projects. Call +91 76777 79418.",
   alternates: {
-    canonical: "https://bhawanitechnologies01.com",
+    canonical: "https://www.bhawanitechnologies.in",
   },
   openGraph: {
     title: "Best Waterproofing Service in Delhi NCR | Bhawani Technologies",
     description:
       "Delhi NCR's #1 waterproofing company. 10+ years, 500+ projects. Free site inspection. Terrace, basement, epoxy flooring, grouting & more.",
-    url: "https://bhawanitechnologies01.com",
+    url: "https://www.bhawanitechnologies.in",
   },
 };
 
