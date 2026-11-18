@@ -145,7 +145,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: "YZZijvWRlDrc4YUfwDYcBX9tqe3FZ-QcsQ10umIj3o0",
+    google: "DqVJv8c2EVZd3D0sDS17_yRl8_AhouXWV_h3fPj3p1Y",
   },
 };
 
