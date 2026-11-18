@@ -2,8 +2,18 @@ import { Droplets, Umbrella, Layers, Box, Zap, Building2, CheckCircle, ArrowRigh
 import Link from "next/link";
 
 export const metadata = {
-    title: "Our Services | Bhawani Technologies",
-    description: "Expert trading and application of Construction Chemicals including industrial flooring, waterproofing membranes, injection grouting, joint sealants, geotextiles, and anti-corrosive coatings.",
+    title: "Waterproofing & Epoxy Flooring Services in Delhi NCR",
+    description:
+        "Complete waterproofing & construction chemical services in Delhi NCR — industrial epoxy flooring, APP/EPDM membranes, PU injection grouting, joint sealants, geotextiles & corrosion protection. Free inspection. Call +91 76777 79418.",
+    alternates: {
+        canonical: "https://bhawanitechnologies01.com/services",
+    },
+    openGraph: {
+        title: "Waterproofing & Epoxy Flooring Services in Delhi NCR | Bhawani Technologies",
+        description:
+            "Industrial epoxy flooring, waterproofing membranes, injection grouting, joint sealants & more. Expert application across Delhi NCR. Free site inspection.",
+        url: "https://bhawanitechnologies01.com/services",
+    },
 };
 
 const services = [

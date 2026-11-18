@@ -3,8 +3,14 @@ export default function sitemap() {
         {
             url: 'https://bhawanitechnologies01.com',
             lastModified: new Date(),
-            changeFrequency: 'yearly',
+            changeFrequency: 'weekly',
             priority: 1,
+        },
+        {
+            url: 'https://bhawanitechnologies01.com/services',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
         },
         {
             url: 'https://bhawanitechnologies01.com/about',
@@ -13,22 +19,16 @@ export default function sitemap() {
             priority: 0.8,
         },
         {
-            url: 'https://bhawanitechnologies01.com/services',
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.8,
-        },
-        {
             url: 'https://bhawanitechnologies01.com/clients',
             lastModified: new Date(),
             changeFrequency: 'monthly',
-            priority: 0.8,
+            priority: 0.7,
         },
         {
             url: 'https://bhawanitechnologies01.com/contact',
             lastModified: new Date(),
             changeFrequency: 'yearly',
-            priority: 0.5,
+            priority: 0.6,
         },
     ]
 }

@@ -2,8 +2,18 @@ import { Droplets, Umbrella, Layers, Box, Zap, Building2, CheckCircle, ArrowRigh
 import Image from "next/image";
 
 export const metadata = {
-    title: "About Us | Bhawani Technologies",
-    description: "Learn about Bhawani Technologies, our Construction Chemicals Division (CCD), and our core competencies in trading and application of waterproofing & epoxy flooring.",
+    title: "About Bhawani Technologies | Waterproofing Experts in Delhi NCR",
+    description:
+        "10+ years, 500+ projects. Bhawani Technologies is Delhi NCR's trusted waterproofing company specialising in high-performance waterproofing systems, epoxy flooring & construction chemicals. Free site inspection.",
+    alternates: {
+        canonical: "https://bhawanitechnologies01.com/about",
+    },
+    openGraph: {
+        title: "About Bhawani Technologies | Waterproofing Experts in Delhi NCR",
+        description:
+            "10+ years experience, 500+ completed projects. Expert waterproofing & construction chemical solutions across Delhi NCR.",
+        url: "https://bhawanitechnologies01.com/about",
+    },
 };
 
 export default function AboutPage() {

@@ -2,8 +2,18 @@ import { Building2 } from "lucide-react";
 import Customers from "@/components/sections/Customers";
 
 export const metadata = {
-    title: "Our Clients | Bhawani Technologies",
-    description: "See our list of executed projects and top organizations that trust Bhawani Technologies for waterproofing and industrial flooring.",
+    title: "Trusted Clients & Projects | Bhawani Technologies Delhi",
+    description:
+        "500+ completed projects. Bhawani Technologies has served leading companies including M3M, Thapar University, GST Bhawan, M2K Entertainment & more across Delhi NCR for waterproofing & epoxy flooring.",
+    alternates: {
+        canonical: "https://bhawanitechnologies01.com/clients",
+    },
+    openGraph: {
+        title: "Trusted Clients & Projects | Bhawani Technologies Delhi",
+        description:
+            "Trusted by industry leaders across Delhi NCR. 500+ waterproofing & industrial flooring projects for residential, commercial & government clients.",
+        url: "https://bhawanitechnologies01.com/clients",
+    },
 };
 
 const testimonials = [
