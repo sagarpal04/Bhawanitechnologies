@@ -10,7 +10,6 @@ const navLinks = [
     { name: "About Us", href: "#about" },
     { name: "Services", href: "#services", hasDropdown: true },
     { name: "Products", href: "#services" },
-    { name: "Projects", href: "#projects" },
     { name: "Features", href: "#features" },
     { name: "Contact Us", href: "#contact" },
 ];
