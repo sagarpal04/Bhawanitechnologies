@@ -41,6 +41,17 @@ export default function Footer() {
                         {/* Social Links */}
                         <div className="flex items-center gap-3 mt-5">
                             <a
+                                href="https://share.google/F3RpB3J4RePxntDvf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Bhawani Technologies on Google Maps"
+                                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/40 hover:bg-green-400/10 transition-all duration-200"
+                            >
+                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0C7.802 0 4 3.403 4 7.602 4 11.8 7.469 16.812 12 24c4.531-7.188 8-12.2 8-16.398C20 3.403 16.199 0 12 0zm0 11a3 3 0 110-6 3 3 0 010 6z"/>
+                                </svg>
+                            </a>
+                            <a
                                 href="https://www.instagram.com/bhawani_technologies01"
                                 target="_blank"
                                 rel="noopener noreferrer"
