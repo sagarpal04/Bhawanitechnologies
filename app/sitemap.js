@@ -13,6 +13,42 @@ export default function sitemap() {
             priority: 0.9,
         },
         {
+            url: 'https://www.bhawanitechnologies.in/services/terrace-waterproofing',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://www.bhawanitechnologies.in/services/basement-waterproofing',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://www.bhawanitechnologies.in/services/bathroom-waterproofing',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://www.bhawanitechnologies.in/services/roof-waterproofing',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://www.bhawanitechnologies.in/services/water-tank-waterproofing',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: 'https://www.bhawanitechnologies.in/services/epoxy-flooring',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: 'https://www.bhawanitechnologies.in/about',
             lastModified: new Date(),
             changeFrequency: 'monthly',

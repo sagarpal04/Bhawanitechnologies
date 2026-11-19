@@ -1,6 +1,54 @@
 import { Droplets, Umbrella, Layers, Box, Zap, Building2, CheckCircle, ArrowRight, Shield } from "lucide-react";
 import Link from "next/link";
 
+const serviceLinks = {
+    "Industrial Floorings & Coatings": "/services/epoxy-flooring",
+    "Waterproofing & Membranes": "/services/terrace-waterproofing",
+    "Injection Grouting Systems": null,
+    "Joint Sealants & Adhesives": null,
+    "Geotextiles & Drainage Cells": null,
+    "Corrosion Protection Coatings": null,
+};
+
+const topServices = [
+    {
+        title: "Terrace Waterproofing",
+        desc: "APP membranes, PU coatings & cementitious systems to stop roof leakage permanently.",
+        href: "/services/terrace-waterproofing",
+        badge: "Most Popular",
+    },
+    {
+        title: "Basement Waterproofing",
+        desc: "Crystalline systems & PU injection grouting to stop seepage — no excavation needed in most cases.",
+        href: "/services/basement-waterproofing",
+        badge: null,
+    },
+    {
+        title: "Bathroom Waterproofing",
+        desc: "Fix tile-joint leakage & wet walls. Tile-break or no-tile-break options available.",
+        href: "/services/bathroom-waterproofing",
+        badge: null,
+    },
+    {
+        title: "Roof Waterproofing",
+        desc: "UV-resistant coatings & thermal insulation systems to guard against Delhi's extreme climate.",
+        href: "/services/roof-waterproofing",
+        badge: null,
+    },
+    {
+        title: "Water Tank Waterproofing",
+        desc: "Food-safe, non-toxic coatings to fix tank leakage & prevent algae growth.",
+        href: "/services/water-tank-waterproofing",
+        badge: null,
+    },
+    {
+        title: "Epoxy Flooring",
+        desc: "Seamless, dust-free, chemical-resistant industrial & commercial floor coatings.",
+        href: "/services/epoxy-flooring",
+        badge: null,
+    },
+];
+
 export const metadata = {
     title: "Waterproofing & Epoxy Flooring Services in Delhi NCR",
     description:
@@ -73,6 +121,41 @@ export default function ServicesPage() {
             </div>
 
             <div className="container mx-auto px-6 md:px-12 py-20">
+
+                {/* Primary Service Landing Pages */}
+                <div className="mb-20">
+                    <div className="text-center mb-12">
+                        <span className="text-brand-primary font-bold tracking-wider uppercase text-sm mb-3 block">Our Core Services</span>
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Waterproofing & Flooring Services in Delhi NCR</h2>
+                        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Click any service below to learn about our systems, pricing, and FAQs for that specific treatment.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {topServices.map((service, i) => (
+                            <Link
+                                key={i}
+                                href={service.href}
+                                className="group relative bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-brand-primary hover:shadow-xl transition-all duration-300"
+                            >
+                                {service.badge && (
+                                    <span className="absolute top-4 right-4 bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                                        {service.badge}
+                                    </span>
+                                )}
+                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors">{service.title}</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed mb-5">{service.desc}</p>
+                                <span className="inline-flex items-center gap-2 text-brand-primary font-bold text-sm">
+                                    Learn More <ArrowRight size={16} />
+                                </span>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="text-center mb-12">
+                    <span className="text-brand-primary font-bold tracking-wider uppercase text-sm mb-3 block">Full Service Range</span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Complete Construction Chemical Solutions</h2>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
                         <div key={index} className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl hover:bg-white transition-all duration-300 group">
