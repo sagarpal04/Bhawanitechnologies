@@ -162,11 +162,17 @@ export const metadata = {
   metadataBase: new URL("https://www.bhawanitechnologies.in"),
   icons: {
     icon: [
-      { url: "/BhawaniTechLogo.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
     ],
-    apple: "/BhawaniTechLogo.png",
-    shortcut: "/BhawaniTechLogo.png",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
   },
+  manifest: "/manifest.json",
   title: {
     default: "Bhawani Technologies | Best Waterproofing Company in Delhi NCR",
     template: "%s | Bhawani Technologies",
@@ -241,6 +247,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon-48x48.png" type="image/png" sizes="48x48" />
+        <link rel="icon" href="/icon-96x96.png" type="image/png" sizes="96x96" />
+        <link rel="icon" href="/icon-192x192.png" type="image/png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180" />
+        <link rel="manifest" href="/manifest.json" />
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"
