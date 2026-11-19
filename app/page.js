@@ -24,6 +24,54 @@ export const metadata = {
   },
 };
 
+// SiteLinksSearchBox + BreadcrumbList — both trigger Google Sitelinks under branded search results
+const sitelinksSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bhawanitechnologies.in/#website",
+  url: "https://www.bhawanitechnologies.in",
+  name: "Bhawani Technologies",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://www.bhawanitechnologies.in/?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.bhawanitechnologies.in",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Services",
+      item: "https://www.bhawanitechnologies.in/services",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "About",
+      item: "https://www.bhawanitechnologies.in/about",
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Contact",
+      item: "https://www.bhawanitechnologies.in/contact",
+    },
+  ],
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -74,6 +122,16 @@ const faqSchema = {
 export default function Home() {
   return (
     <>
+      <Script
+        id="sitelinks-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(sitelinksSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Script
         id="faq-schema"
         type="application/ld+json"

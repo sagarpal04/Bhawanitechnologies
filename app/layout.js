@@ -7,16 +7,87 @@ import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
+// Organization schema — tells Google's Knowledge Graph the AUTHORITATIVE identity of this brand
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.bhawanitechnologies.in/#organization",
+  name: "Bhawani Technologies",
+  alternateName: "Bhawani Technologies Waterproofing",
+  legalName: "Bhawani Technologies",
+  description:
+    "Bhawani Technologies — Delhi NCR's professional waterproofing company specialising in terrace, basement, bathroom & water tank waterproofing, epoxy flooring, injection grouting, and construction chemicals. Office at C-288 New Ashok Nagar, New Delhi.",
+  url: "https://www.bhawanitechnologies.in",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.bhawanitechnologies.in/BhawaniTechLogo.png",
+    width: 200,
+    height: 200,
+  },
+  image: "https://www.bhawanitechnologies.in/BhawaniTechLogo.png",
+  telephone: "+917677779418",
+  email: "bhawanitechnologies01@gmail.com",
+  foundingDate: "2015",
+  numberOfEmployees: { "@type": "QuantitativeValue", value: 50 },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "C-288, 3rd Floor, New Ashok Nagar",
+    addressLocality: "New Delhi",
+    addressRegion: "Delhi",
+    postalCode: "110096",
+    addressCountry: "IN",
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+917677779418",
+      contactType: "customer service",
+      areaServed: "IN",
+      availableLanguage: ["Hindi", "English"],
+      contactOption: "TollFree",
+    },
+  ],
+  sameAs: [
+    "https://www.instagram.com/bhawani_technologies01",
+    "https://www.facebook.com/share/1LECb6Y3Fv/",
+    "https://www.linkedin.com/in/bhawani-technologies-a47407423",
+    "https://share.google/F3RpB3J4RePxntDvf",
+  ],
+};
+
+// WebSite schema — enables Google Sitelinks Search Box & establishes canonical website
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.bhawanitechnologies.in/#website",
+  name: "Bhawani Technologies",
+  url: "https://www.bhawanitechnologies.in",
+  description: "Best waterproofing company in Delhi NCR. Terrace, basement, bathroom & water tank waterproofing, epoxy flooring, injection grouting.",
+  publisher: { "@id": "https://www.bhawanitechnologies.in/#organization" },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://www.bhawanitechnologies.in/?s={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
   "@id": "https://www.bhawanitechnologies.in/#localbusiness",
   name: "Bhawani Technologies",
+  alternateName: "Bhawani Technologies Waterproofing Delhi",
   description:
-    "Bhawani Technologies is Delhi NCR's trusted waterproofing company specialising in terrace, basement, bathroom & water tank waterproofing, epoxy flooring, injection grouting, and construction chemicals.",
+    "Bhawani Technologies is Delhi NCR's trusted waterproofing company specialising in terrace, basement, bathroom & water tank waterproofing, epoxy flooring, injection grouting, and construction chemicals. Located at C-288 New Ashok Nagar, New Delhi.",
   url: "https://www.bhawanitechnologies.in",
   telephone: "+917677779418",
   email: "bhawanitechnologies01@gmail.com",
+  image: "https://www.bhawanitechnologies.in/BhawaniTechLogo.png",
+  logo: "https://www.bhawanitechnologies.in/BhawaniTechLogo.png",
+  parentOrganization: { "@id": "https://www.bhawanitechnologies.in/#organization" },
   address: {
     "@type": "PostalAddress",
     streetAddress: "C-288, 3rd Floor, New Ashok Nagar",
@@ -30,6 +101,7 @@ const localBusinessSchema = {
     latitude: 28.6066,
     longitude: 77.3194,
   },
+  hasMap: "https://share.google/F3RpB3J4RePxntDvf",
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -50,13 +122,14 @@ const localBusinessSchema = {
     "@type": "OfferCatalog",
     name: "Waterproofing & Construction Chemical Services",
     itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Terrace Waterproofing" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Basement Waterproofing" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Bathroom Waterproofing" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Water Tank Waterproofing" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "PU Injection Grouting" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Epoxy Flooring" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Terrace Waterproofing", url: "https://www.bhawanitechnologies.in/services/terrace-waterproofing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Basement Waterproofing", url: "https://www.bhawanitechnologies.in/services/basement-waterproofing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Bathroom Waterproofing", url: "https://www.bhawanitechnologies.in/services/bathroom-waterproofing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Roof Waterproofing", url: "https://www.bhawanitechnologies.in/services/roof-waterproofing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Water Tank Waterproofing", url: "https://www.bhawanitechnologies.in/services/water-tank-waterproofing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Epoxy Flooring", url: "https://www.bhawanitechnologies.in/services/epoxy-flooring" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Industrial Polyurethane Flooring" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "PU Injection Grouting" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Crack Repair & Sealing" } },
     ],
   },
@@ -76,12 +149,10 @@ const localBusinessSchema = {
     },
   ],
   sameAs: [
-    "https://maps.google.com/?q=C-288,+New+Ashok+Nagar,+Delhi",
-    "https://share.google/F3RpB3J4RePxntDvf",
-    "https://www.bhawanitechnologies.in",
     "https://www.instagram.com/bhawani_technologies01",
     "https://www.facebook.com/share/1LECb6Y3Fv/",
     "https://www.linkedin.com/in/bhawani-technologies-a47407423",
+    "https://share.google/F3RpB3J4RePxntDvf",
   ],
 };
 
@@ -195,6 +266,16 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <Script
           id="local-business-schema"
           type="application/ld+json"
