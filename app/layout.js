@@ -90,12 +90,18 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata = {
   metadataBase: new URL("https://www.bhawanitechnologies.in"),
   title: {
-    default: "Bhawani Technologies | #1 Waterproofing Service in Delhi NCR",
+    default: "Bhawani Technologies | Best Waterproofing Company in Delhi NCR",
     template: "%s | Bhawani Technologies",
   },
   description:
-    "Bhawani Technologies — Delhi's trusted waterproofing experts. Terrace, basement, bathroom & water tank waterproofing, epoxy flooring, injection grouting & more. Free site inspection. Call +91 76777 79418.",
+    "Bhawani Technologies is a trusted waterproofing company in Delhi NCR, offering professional terrace, bathroom, basement and roof waterproofing solutions for residential and commercial properties.",
   keywords: [
+    "best waterproofing company in Delhi",
+    "waterproofing contractors in Delhi NCR",
+    "terrace waterproofing services",
+    "roof leakage solution",
+    "bathroom waterproofing",
+    "basement waterproofing",
     "waterproofing service Delhi",
     "waterproofing company Delhi NCR",
     "terrace waterproofing Delhi",
@@ -123,7 +129,7 @@ export const metadata = {
     canonical: "https://www.bhawanitechnologies.in",
   },
   openGraph: {
-    title: "Bhawani Technologies | #1 Waterproofing Service in Delhi NCR",
+    title: "Bhawani Technologies | Best Waterproofing Company in Delhi NCR",
     description:
       "Expert waterproofing and industrial epoxy flooring solutions for residential, commercial & industrial projects in Delhi NCR. Free site inspection. 500+ projects completed.",
     type: "website",
