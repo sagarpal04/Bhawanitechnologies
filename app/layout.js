@@ -89,6 +89,13 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
   metadataBase: new URL("https://www.bhawanitechnologies.in"),
+  icons: {
+    icon: [
+      { url: "/BhawaniTechLogo.png", type: "image/png" },
+    ],
+    apple: "/BhawaniTechLogo.png",
+    shortcut: "/BhawaniTechLogo.png",
+  },
   title: {
     default: "Bhawani Technologies | Best Waterproofing Company in Delhi NCR",
     template: "%s | Bhawani Technologies",
