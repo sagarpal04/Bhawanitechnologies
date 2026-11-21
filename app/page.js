@@ -1,4 +1,5 @@
 import ServicesPreview from "@/components/sections/ServicesPreview";
+import RoofWaterproofingGuide from "@/components/sections/RoofWaterproofingGuide";
 import ImageShowcase from "@/components/sections/ImageShowcase";
 import Brands from "@/components/sections/Brands";
 import Customers from "@/components/sections/Customers";
@@ -10,18 +11,48 @@ import About from "@/components/sections/About";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Waterproofing Service in Delhi NCR | Bhawani Technologies",
+  title: "Roof Waterproofing & Best Waterproofing Services in Delhi NCR | Bhawani Technologies",
   description:
-    "Bhawani Technologies — Delhi NCR's #1 waterproofing company. Terrace, basement, bathroom & water tank waterproofing, epoxy flooring, injection grouting. Free site inspection. 500+ projects. Call +91 76777 79418.",
+    "Bhawani Technologies — Delhi NCR's #1 roof waterproofing and terrace waterproofing company. Stop concrete roof leaks, damp walls & seepage. 500+ projects. Free inspection: +91 76777 79418.",
   alternates: {
     canonical: "https://www.bhawanitechnologies.in",
   },
   openGraph: {
-    title: "Best Waterproofing Service in Delhi NCR | Bhawani Technologies",
+    title: "Roof Waterproofing & Best Waterproofing Services in Delhi NCR | Bhawani Technologies",
     description:
-      "Delhi NCR's #1 waterproofing company. 10+ years, 500+ projects. Free site inspection. Terrace, basement, epoxy flooring, grouting & more.",
+      "Delhi NCR's #1 roof waterproofing and terrace waterproofing company. 10+ years, 500+ projects. Free site inspection. Roof, terrace, basement & epoxy flooring.",
     url: "https://www.bhawanitechnologies.in",
   },
+};
+
+const homeLocalBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+  "@id": "https://www.bhawanitechnologies.in/#localbusiness",
+  name: "Bhawani Technologies",
+  alternateName: "Bhawani Technologies Roof Waterproofing Delhi",
+  description: "Delhi NCR's trusted roof waterproofing and structural waterproofing contractor. Services include APP membrane laying, PU coatings, cool roof paint, crack repair, and injection grouting.",
+  url: "https://www.bhawanitechnologies.in",
+  telephone: "+917677779418",
+  email: "bhawanitechnologies01@gmail.com",
+  image: "https://www.bhawanitechnologies.in/BhawaniTechLogo.png",
+  logo: "https://www.bhawanitechnologies.in/BhawaniTechLogo.png",
+  priceRange: "₹₹",
+  currenciesAccepted: "INR",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "C-288, 3rd Floor, New Ashok Nagar",
+    addressLocality: "New Delhi",
+    addressRegion: "Delhi",
+    postalCode: "110096",
+    addressCountry: "IN",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 28.6066,
+    longitude: 77.3194,
+  },
+  areaServed: ["Delhi", "Noida", "Gurugram", "Faridabad", "Ghaziabad"],
 };
 
 // SiteLinksSearchBox + BreadcrumbList — both trigger Google Sitelinks under branded search results
@@ -123,6 +154,11 @@ export default function Home() {
   return (
     <>
       <Script
+        id="home-local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeLocalBusinessSchema) }}
+      />
+      <Script
         id="sitelinks-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(sitelinksSchema) }}
@@ -140,6 +176,7 @@ export default function Home() {
       <Hero />
       <About />
       <ServicesPreview />
+      <RoofWaterproofingGuide />
       <ImageShowcase />
       <Brands />
       <Customers />

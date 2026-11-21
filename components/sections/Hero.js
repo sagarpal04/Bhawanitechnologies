@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 /* ─── data ─────────────────────────────────────────────────── */
 const checks = [
@@ -98,20 +99,20 @@ export default function Hero() {
                 {/* ── IMAGE CONTAINER ── */}
                 <div className="relative w-full h-[40vh] min-h-[280px] md:absolute md:inset-0 md:h-full">
                     <Image
-                        src="/newImage.png"
-                        alt="Professional waterproofing application on rooftop"
+                        src="/hero-roof.webp"
+                        alt="Professional roof waterproofing application on concrete terrace"
                         fill
                         className="object-cover object-[85%_top] md:object-top"
                         priority
                         fetchPriority="high"
-                        sizes="100vw"
-                        quality={90}
+                        sizes="(max-width: 768px) 100vw, 100vw"
+                        quality={85}
                     />
                 </div>
 
                 {/* ── GRADIENT OVERLAY — white on left, transparent on right (desktop only) ── */}
                 <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/10 pointer-events-none" />
-                {/* Hello  hbedhfbashbfhasbhfbshbfhbshfb*/}
+
                 {/* ── TEXT CONTENT — z-10 over the gradient ── */}
                 <div className="
                     relative z-10
@@ -121,28 +122,28 @@ export default function Hero() {
                     px-5 sm:px-8 md:px-12 lg:px-[max(3rem,calc((100vw-1280px)/2+3rem))]
                     bg-white md:bg-transparent
                 ">
-                    <div className="max-w-[520px] space-y-5">
+                    <div className="max-w-[540px] space-y-5">
 
                         {/* Breadcrumb */}
                         <p className="text-[11px] font-bold text-green-700 uppercase tracking-widest leading-tight">
-                            BHAWANI TECHNOLOGIES
+                            BHAWANI TECHNOLOGIES — DELHI NCR
                         </p>
 
                         {/* Heading */}
-                        <h1 className="text-4xl sm:text-5xl md:text-[3.25rem] font-extrabold leading-[1.1] text-gray-900">
-                            A Complete{" "}
-                            <span className="text-green-600 block">Waterproofing</span>
-                            <span className="text-green-600 block">Solution</span>
+                        <h1 className="text-4xl sm:text-5xl md:text-[3.1rem] font-extrabold leading-[1.1] text-gray-900">
+                            Roof Waterproofing &amp;{" "}
+                            <span className="text-green-600 block">Complete Waterproofing</span>
+                            <span className="text-green-600 block">Solutions</span>
                         </h1>
 
                         {/* Subheading Badge */}
                         <p className="text-xs md:text-sm font-bold text-green-700 uppercase tracking-wider">
-                            Professional Waterproofing Services — Supply &amp; Application
+                            Certified Supply &amp; Application Specialists
                         </p>
 
-                        {/* Description */}
-                        <p className="text-gray-600 text-sm md:text-[0.95rem] leading-relaxed max-w-[420px]">
-                            We specialize in the supply and application of high-performance waterproofing systems for residential, commercial, and industrial buildings. Our services include terrace waterproofing, basement waterproofing, bathroom waterproofing, water tank waterproofing, PU coating, epoxy flooring, crack repair, and injection grouting.
+                        {/* Description - mentions roof waterproofing in first 100 words */}
+                        <p className="text-gray-600 text-sm md:text-[0.95rem] leading-relaxed max-w-[460px]">
+                            Bhawani Technologies is Delhi NCR&apos;s leading specialist in <strong>roof waterproofing</strong>, terrace waterproofing, and concrete slab leakage solutions. We supply and apply high-performance APP bitumen membranes, PU liquid coatings, elastomeric heat-proof paint, and PU injection grouting across Delhi, Noida, Gurgaon, Ghaziabad, and Faridabad.
                         </p>
 
                         {/* 2-column feature checkmarks */}
@@ -188,8 +189,8 @@ export default function Hero() {
                                 </svg>
                                 Call Us Now
                             </a>
-                            <a
-                                href="#services"
+                            <Link
+                                href="/services"
                                 id="hero-services-btn"
                                 className="inline-flex items-center justify-center gap-2 px-7 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg bg-white/80 hover:border-green-500 hover:text-green-700 transition-all duration-200 text-sm"
                             >
@@ -206,7 +207,7 @@ export default function Hero() {
                                     <line x1="5" y1="12" x2="19" y2="12" />
                                     <polyline points="12 5 19 12 12 19" />
                                 </svg>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

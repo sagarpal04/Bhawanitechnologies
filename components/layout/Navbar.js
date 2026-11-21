@@ -6,12 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "#services", hasDropdown: true },
-    { name: "Products", href: "#services" },
-    { name: "Features", href: "#features" },
-    { name: "Contact Us", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/services", hasDropdown: true },
+    { name: "Roof Waterproofing", href: "/services/roof-waterproofing" },
+    { name: "Contact Us", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -28,14 +27,15 @@ export default function Navbar() {
 
     const handleNavClick = (e, href) => {
         setIsOpen(false);
-        if (href.startsWith("http")) return;
-        e.preventDefault();
-        const element = document.querySelector(href);
-        if (element) {
-            const headerOffset = 110;
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+        if (href.startsWith("#")) {
+            e.preventDefault();
+            const element = document.querySelector(href);
+            if (element) {
+                const headerOffset = 110;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+            }
         }
     };
 
@@ -124,7 +124,7 @@ export default function Navbar() {
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center gap-1 lg:gap-2">
                         {navLinks.map((link) => (
-                            <a
+                            <Link
                                 key={link.name}
                                 href={link.href}
                                 onClick={(e) => handleNavClick(e, link.href)}
@@ -132,7 +132,7 @@ export default function Navbar() {
                             >
                                 {link.name}
                                 {link.hasDropdown && <ChevronDown size={13} className="opacity-60" />}
-                            </a>
+                            </Link>
                         ))}
                     </div>
 
@@ -165,14 +165,14 @@ export default function Navbar() {
                     {isOpen && (
                         <div className="absolute top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center gap-6 md:hidden z-40">
                             {navLinks.map((link) => (
-                                <a
+                                <Link
                                     key={link.name}
                                     href={link.href}
                                     onClick={(e) => handleNavClick(e, link.href)}
                                     className="text-xl font-medium text-gray-800 hover:text-green-600 transition-colors"
                                 >
                                     {link.name}
-                                </a>
+                                </Link>
                             ))}
                             <a
                                 href="https://wa.me/917677779418"

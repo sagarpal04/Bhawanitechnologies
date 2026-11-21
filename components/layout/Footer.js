@@ -87,12 +87,12 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Company */}
+                    {/* Company & Legal */}
                     <div>
                         <h3 className="text-xs md:text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4 md:mb-6">
-                            Company
+                            Company &amp; Legal
                         </h3>
-                        <ul className="space-y-3 md:space-y-4 text-sm text-gray-400">
+                        <ul className="space-y-2.5 text-sm text-gray-400">
                             <li>
                                 <Link href="/about" className="hover:text-green-500 transition-colors duration-200">
                                     About Us
@@ -100,7 +100,27 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link href="/services" className="hover:text-green-500 transition-colors duration-200">
-                                    Services
+                                    All Services
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/services/roof-waterproofing" className="hover:text-green-500 transition-colors duration-200">
+                                    Roof Waterproofing
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/services/terrace-waterproofing" className="hover:text-green-500 transition-colors duration-200">
+                                    Terrace Waterproofing
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/privacy-policy" className="hover:text-green-500 transition-colors duration-200">
+                                    Privacy Policy
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/terms" className="hover:text-green-500 transition-colors duration-200">
+                                    Terms of Service
                                 </Link>
                             </li>
                         </ul>
@@ -111,27 +131,32 @@ export default function Footer() {
                         <h3 className="text-xs md:text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4 md:mb-6">
                             Contact Us
                         </h3>
-                        <ul className="space-y-3 md:space-y-4 text-sm text-gray-400">
+                        <ul className="space-y-3 text-sm text-gray-400">
+                            <li>
+                                <Link href="/contact" className="inline-block text-green-400 font-bold hover:underline mb-1">
+                                    Go to Contact Page &amp; Inquiry Form →
+                                </Link>
+                            </li>
                             <li className="flex items-start gap-3">
                                 <span className="mt-1">📍</span>
                                 <a 
                                     href="https://maps.google.com/?q=C-288,+New+Ashok+Nagar,+Delhi,+Near+Rajdhani+Medical+Centre"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-400 hover:text-green-500 transition-colors leading-relaxed"
+                                    className="text-gray-400 hover:text-green-500 transition-colors leading-relaxed text-xs md:text-sm"
                                 >
-                                    C-288, New Ashok Nagar, Delhi, Near Rajdhani Medical Centre
+                                    C-288, New Ashok Nagar, Delhi, Near Rajdhani Medical Centre – 110096
                                 </a>
                             </li>
                             <li className="flex items-center gap-3">
                                 <span>📞</span>
-                                <a href="tel:+917677779418" className="hover:text-green-500 transition-colors">
+                                <a href="tel:+917677779418" className="hover:text-green-500 transition-colors font-medium">
                                     +91 76777 79418
                                 </a>
                             </li>
                             <li className="flex items-center gap-3">
                                 <span>✉️</span>
-                                <a href="mailto:bhawanitechnologies01@gmail.com" className="hover:text-green-500 transition-colors">
+                                <a href="mailto:bhawanitechnologies01@gmail.com" className="hover:text-green-500 transition-colors text-xs md:text-sm">
                                     bhawanitechnologies01@gmail.com
                                 </a>
                             </li>
@@ -141,9 +166,14 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Bottom */}
-            <div className="border-t border-white/5 py-5 md:py-6 px-4 text-center text-xs md:text-sm text-gray-400">
-                © 2026 Bhawani Technologies. All Rights Reserved
+            {/* Disclaimer & Bottom Bar */}
+            <div className="border-t border-white/5 py-6 px-4 text-center text-xs text-gray-400 max-w-5xl mx-auto space-y-2">
+                <p className="text-[11px] text-gray-500 leading-relaxed">
+                    Disclaimer: All on-site inspections, material selection advice, and project estimates are conducted in accordance with standard civil engineering best practices. Actual warranty terms and coverage are finalized upon surface inspection and written project agreement.
+                </p>
+                <p>
+                    © 2026 Bhawani Technologies. All Rights Reserved. | <Link href="/privacy-policy" className="hover:text-white underline">Privacy</Link> | <Link href="/terms" className="hover:text-white underline">Terms</Link>
+                </p>
             </div>
         </footer>
     );
