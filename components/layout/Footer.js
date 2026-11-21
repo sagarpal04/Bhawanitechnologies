@@ -114,6 +114,11 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/technical-guide" className="hover:text-green-500 transition-colors duration-200">
+                                    Technical Engineering Guide
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/services/terrace-waterproofing" className="hover:text-green-500 transition-colors duration-200">
                                     Terrace Waterproofing
                                 </Link>

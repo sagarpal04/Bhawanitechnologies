@@ -19,6 +19,12 @@ export default function sitemap() {
             priority: 0.9,
         },
         {
+            url: 'https://www.bhawanitechnologies.in/technical-guide',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: 'https://www.bhawanitechnologies.in/services/terrace-waterproofing',
             lastModified: new Date(),
             changeFrequency: 'monthly',

@@ -1,5 +1,4 @@
 import ServicesPreview from "@/components/sections/ServicesPreview";
-import RoofWaterproofingGuide from "@/components/sections/RoofWaterproofingGuide";
 import ImageShowcase from "@/components/sections/ImageShowcase";
 import Brands from "@/components/sections/Brands";
 import Customers from "@/components/sections/Customers";
@@ -172,7 +171,6 @@ export default function Home() {
       <Hero />
       <About />
       <ServicesPreview />
-      <RoofWaterproofingGuide />
       <ImageShowcase />
       <Brands />
       <Customers />
