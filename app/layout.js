@@ -278,6 +278,13 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
+        {/* Ahrefs Analytics */}
+        <Script
+          id="ahrefs-analytics"
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="ffOJUQse4Fu103heZCGB/A"
+          strategy="afterInteractive"
+        />
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"
