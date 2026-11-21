@@ -265,6 +265,19 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/icon-192x192.png" type="image/png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180" />
         <link rel="manifest" href="/manifest.json" />
+        {/* JSON-LD Structured Data — in <head> so crawlers see it on first render */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"
@@ -290,21 +303,6 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <Script
-          id="organization-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <Script
-          id="website-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-        <Script
-          id="local-business-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

@@ -1,6 +1,6 @@
 import { CheckCircle, Phone, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Script from "next/script";
+
 
 export const metadata = {
     title: "Water Tank Waterproofing in Delhi NCR | Non-Toxic Tank Lining",
@@ -121,13 +121,11 @@ const whyUs = [
 export default function WaterTankWaterproofingPage() {
     return (
         <div className="bg-white mt-20">
-            <Script
-                id="tank-faq-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
-            <Script
-                id="tank-service-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
             />

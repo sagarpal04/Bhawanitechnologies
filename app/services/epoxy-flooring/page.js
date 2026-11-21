@@ -1,6 +1,6 @@
 import { CheckCircle, Phone, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Script from "next/script";
+
 
 export const metadata = {
     title: "Epoxy Flooring in Delhi NCR | Industrial & Commercial Floor Coating",
@@ -141,13 +141,11 @@ const whyUs = [
 export default function EpoxyFlooringPage() {
     return (
         <div className="bg-white mt-20">
-            <Script
-                id="epoxy-faq-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
-            <Script
-                id="epoxy-service-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
             />

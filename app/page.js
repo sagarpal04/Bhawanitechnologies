@@ -8,7 +8,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import FindUs from "@/components/sections/FindUs";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
-import Script from "next/script";
+
 
 export const metadata = {
   title: "Roof Waterproofing & Best Waterproofing Services in Delhi NCR | Bhawani Technologies",
@@ -153,23 +153,19 @@ const faqSchema = {
 export default function Home() {
   return (
     <>
-      <Script
-        id="home-local-business-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeLocalBusinessSchema) }}
       />
-      <Script
-        id="sitelinks-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(sitelinksSchema) }}
       />
-      <Script
-        id="breadcrumb-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />

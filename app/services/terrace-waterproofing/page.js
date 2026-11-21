@@ -1,6 +1,6 @@
 import { CheckCircle, Phone, ArrowRight, ShieldCheck, Thermometer, Layers, Wrench, HelpCircle } from "lucide-react";
 import Link from "next/link";
-import Script from "next/script";
+
 
 export const metadata = {
     title: "Terrace Waterproofing in Delhi NCR | Rate Per Sq Ft, Crack Filling & Heat Proofing",
@@ -134,13 +134,11 @@ const pricingTable = [
 export default function TerraceWaterproofingPage() {
     return (
         <div className="bg-white mt-20">
-            <Script
-                id="terrace-faq-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
-            <Script
-                id="terrace-service-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
             />

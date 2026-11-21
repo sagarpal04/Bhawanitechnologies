@@ -1,6 +1,6 @@
 import { CheckCircle, Phone, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Script from "next/script";
+
 
 export const metadata = {
     title: "Bathroom Waterproofing in Delhi NCR | Fix Tile Leakage & Wet Wall Seepage",
@@ -121,13 +121,11 @@ const whyUs = [
 export default function BathroomWaterproofingPage() {
     return (
         <div className="bg-white mt-20">
-            <Script
-                id="bathroom-faq-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
-            <Script
-                id="bathroom-service-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
             />

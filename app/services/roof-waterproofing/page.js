@@ -1,6 +1,6 @@
 import { CheckCircle, Phone, ArrowRight, ShieldCheck, Wrench, Thermometer, Droplets, Layers, Building, HelpCircle, FileText } from "lucide-react";
 import Link from "next/link";
-import Script from "next/script";
+
 
 export const metadata = {
     title: "Roof Waterproofing Services in Delhi NCR | Cost Per Sq Ft & Best Solutions",
@@ -180,13 +180,11 @@ const priceTable = [
 export default function RoofWaterproofingPage() {
     return (
         <div className="bg-white mt-20">
-            <Script
-                id="roof-faq-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
-            <Script
-                id="roof-service-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
             />

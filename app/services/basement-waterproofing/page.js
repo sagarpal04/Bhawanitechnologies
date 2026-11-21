@@ -1,6 +1,6 @@
 import { CheckCircle, Phone, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Script from "next/script";
+
 
 export const metadata = {
     title: "Basement Waterproofing in Delhi NCR | Stop Seepage & Dampness",
@@ -121,13 +121,11 @@ const whyUs = [
 export default function BasementWaterproofingPage() {
     return (
         <div className="bg-white mt-20">
-            <Script
-                id="basement-faq-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
-            <Script
-                id="basement-service-schema"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
             />
