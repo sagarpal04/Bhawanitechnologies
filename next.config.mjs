@@ -35,6 +35,20 @@ const nextConfig = {
         ],
       },
       {
+        // robots.txt — include Content-Signal directives
+        source: '/robots.txt',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'all',
+          },
+          {
+            key: 'Content-Signal',
+            value: 'ai-train=yes, search=yes',
+          },
+        ],
+      },
+      {
         // Cache static assets for 1 year
         source: '/(.*)\\.(png|jpg|jpeg|gif|webp|avif|ico|svg|woff|woff2)',
         headers: [

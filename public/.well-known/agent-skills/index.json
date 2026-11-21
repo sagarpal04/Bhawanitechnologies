@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "name": "Bhawani Technologies",
+  "description": "Delhi NCR's #1 waterproofing company offering roof, terrace, basement, bathroom & water tank waterproofing, epoxy flooring, and construction chemical supply & application.",
+  "url": "https://www.bhawanitechnologies.in",
+  "skills": [
+    {
+      "name": "Get Waterproofing Quote",
+      "description": "Request a free site inspection and waterproofing cost estimate for any property in Delhi NCR.",
+      "endpoint": "tel:+917677779418",
+      "parameters": {
+        "location": "Property address in Delhi NCR",
+        "area_sqft": "Approximate area in square feet",
+        "problem": "Type of water leakage or waterproofing need"
+      }
+    },
+    {
+      "name": "Browse Services",
+      "description": "View all waterproofing and flooring services offered by Bhawani Technologies.",
+      "endpoint": "https://www.bhawanitechnologies.in/services"
+    },
+    {
+      "name": "Roof Waterproofing Details",
+      "description": "Detailed information about roof waterproofing systems, costs, and processes.",
+      "endpoint": "https://www.bhawanitechnologies.in/services/roof-waterproofing"
+    },
+    {
+      "name": "Contact Us",
+      "description": "Reach Bhawani Technologies for waterproofing inquiries.",
+      "endpoint": "https://www.bhawanitechnologies.in/contact"
+    }
+  ],
+  "contact": {
+    "phone": "+917677779418",
+    "email": "bhawanitechnologies01@gmail.com",
+    "address": "C-288, 3rd Floor, New Ashok Nagar, New Delhi - 110096"
+  }
+}
