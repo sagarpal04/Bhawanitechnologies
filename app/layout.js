@@ -259,6 +259,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="ahrefs-site-verification" content="837f456a8f308701773a943db8d31c3b3d863dc40dc42dfa58cb262decbe72f5" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon-48x48.png" type="image/png" sizes="48x48" />
         <link rel="icon" href="/icon-96x96.png" type="image/png" sizes="96x96" />
