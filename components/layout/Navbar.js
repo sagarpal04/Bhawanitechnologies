@@ -9,7 +9,7 @@ const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services", hasDropdown: true },
-    { name: "Roof Waterproofing", href: "/services/roof-waterproofing" },
+    // { name: "Roof Waterproofing", href: "/services/roof-waterproofing" },
     { name: "Contact Us", href: "/contact" },
 ];
 
