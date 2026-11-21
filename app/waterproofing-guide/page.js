@@ -446,12 +446,6 @@ export default function WaterproofingGuidePage() {
                     </div>
 
                     <div className="flex items-center gap-4 text-xs md:text-sm text-gray-500 mb-6">
-                        <span className="flex items-center gap-1.5 bg-white px-3 py-1 rounded-full border border-gray-200 shadow-sm font-medium">
-                            <Calendar size={14} className="text-brand-primary" /> Nov 21, 2026
-                        </span>
-                        <span className="flex items-center gap-1.5 bg-white px-3 py-1 rounded-full border border-gray-200 shadow-sm font-medium">
-                            <User size={14} className="text-brand-primary" /> @jkknj
-                        </span>
                         <span className="flex items-center gap-1.5 bg-green-50 text-green-700 px-3 py-1 rounded-full border border-green-200 font-semibold">
                             <Award size={14} /> Dr. Fixit Certified Waterproofer
                         </span>
